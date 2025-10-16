@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="A reliable collective" xml:space="preserve">
+    <value>Etibarlı kollektiv</value>
+  </data>
+  <data name="A solution to every issue related to tourism" xml:space="preserve">
+    <value>Turizmlə bağlı bütün məsələlərin həlli</value>
+  </data>
+  <data name="Adventure" xml:space="preserve">
+    <value>Macəra</value>
+  </data>
+  <data name="As a tourism company, we promise that you will be amazed by the dazzling views" xml:space="preserve">
+    <value>Səyahət şirkəti olaraq göz qamaşdıran mənzərələrə heyran qalacağınıza söz veririk</value>
+  </data>
+  <data name="Budget friendly packages" xml:space="preserve">
+    <value>Büdcəyə uyğun paketlər</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>Kateqoriyalar</value>
+  </data>
+  <data name="Culture" xml:space="preserve">
+    <value>Mədəniyyət</value>
+  </data>
+  <data name="Customer satisfaction is the main priority in Space Travel. That's why our team works day and night to provide our customers with the best service." xml:space="preserve">
+    <value>Space Travel-n əsas öncəliyi  müştəri məmnunyətidir. Bunun üçündə komanda olaraq müştərilərimizə gecə gündüz xidmət edirik</value>
+  </data>
+  <data name="destination" xml:space="preserve">
+    <value>istiqamət</value>
+  </data>
+  <data name="Discover" xml:space="preserve">
+    <value>Kəşf et</value>
+  </data>
+  <data name="Enter your email" xml:space="preserve">
+    <value>e-poçtunuzu daxil edin</value>
+  </data>
+  <data name="Every detail is thought out for the comfort of children and adults, suitable for every budget, family holidays are organized with direct flights, comfortable hotels located in the center, transfers between cities and, most importantly, visa support." xml:space="preserve">
+    <value>Hər bir budcəyə uygun ,uşaq və böyüklərin rahatlığı üçün hər bir detalı düşünülüb, birbaşa uçuşla, mərkəzdə yerləşən komfortlu otellerde , şəhərler arası transferle və ən əsası viza dəstəyi ilə ailevi tətil təşkil edilir</value>
+  </data>
+  <data name="Explore the top destination of planet earth" xml:space="preserve">
+    <value>Dünyanın ən tanımmış yerlərini kəşf edin</value>
+  </data>
+  <data name="From breathtaking views to impeccable service, treat yourself and your loved ones to a spectacular vacation that will leave you mesmerized." xml:space="preserve">
+    <value>Nəfəs kəsən mənzərələrdən qüsursuz xidmətə qədər özünüzü və yaxınlarınızı sizi heyran edəcək möhtəşəm bir tətilə qədər sevindirin.</value>
+  </data>
+  <data name="From Our Blog" xml:space="preserve">
+    <value>Blogumuzdan</value>
+  </data>
+  <data name="Get special offers in your inbox" xml:space="preserve">
+    <value>Gələnlər qutunuzda xüsusi təkliflər əldə edin</value>
+  </data>
+  <data name="Hurry up to make a reservation before the places run out and the prices increase." xml:space="preserve">
+    <value>Yerlər bitmədən və qiymətlər artmadan rezervasiya etməyə tələsin.</value>
+  </data>
+  <data name="If you want luxury, adventure and a perfect vacation, please contact Space Travel collectively" xml:space="preserve">
+    <value>Lüks, macəra və mükəmməl tətil istəyirsinizsə, Space Travel ilə birlikdə əlaqə saxlayın</value>
+  </data>
+  <data name="Insured travel" xml:space="preserve">
+    <value>Sığortalı seyahet</value>
+  </data>
+  <data name="Let’s explore the world" xml:space="preserve">
+    <value>Gəlin dünyanı araşdıraq</value>
+  </data>
+  <data name="Live unforgettable moments." xml:space="preserve">
+    <value>Unudulmaz anlar yaşayin.</value>
+  </data>
+  <data name="Make your tour more enjoyable with Space Travel" xml:space="preserve">
+    <value>Səyahətivizi SpaceTravel ilə Əyləncəli edin </value>
+  </data>
+  <data name="Most popular destination" xml:space="preserve">
+    <value>Ən məşhur istiqamət</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>Paketlər</value>
+  </data>
+  <data name="Pick A Tour Type" xml:space="preserve">
+    <value>Tur növü seçin </value>
+  </data>
+  <data name="Polite travel agency" xml:space="preserve">
+    <value>Nezaketli turizm agentliyi</value>
+  </data>
+  <data name="popular destinations" xml:space="preserve">
+    <value>Populyar istiqamətlər</value>
+  </data>
+  <data name="Read more" xml:space="preserve">
+    <value>Ətraflı oxu</value>
+  </data>
+  <data name="reviews" xml:space="preserve">
+    <value>rəylər</value>
+  </data>
+  <data name="Roamance" xml:space="preserve">
+    <value>Romantika</value>
+  </data>
+  <data name="Satisfaction guarranted" xml:space="preserve">
+    <value>Məmnuniyyətə zəmanət verilir</value>
+  </data>
+  <data name="start from" xml:space="preserve">
+    <value>Qiymət başlayır</value>
+  </data>
+  <data name="start travelling now" xml:space="preserve">
+    <value>İndi səyahətə başla</value>
+  </data>
+  <data name="Successful" xml:space="preserve">
+    <value>uğurlu</value>
+  </data>
+  <data name="Take advantage of the opportunity to have a wonderful vacation." xml:space="preserve">
+    <value>Möhtəşəm istirahət keçirmək şansindan sizde yararlanın.</value>
+  </data>
+  <data name="Those planning a comfortable and unforgettable vacation in hotels located in the heart of nature, on the coast of the blue sea, can contact Space Travel" xml:space="preserve">
+    <value>Təbiətin qoynunda, masmavi dənizin sahilində yerləşən otellərdə rahat və unudulmaz tətil planlayanlar Space Travele müraciət edə bilərlər.</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Ümumi</value>
+  </data>
+  <data name="tour packages" xml:space="preserve">
+    <value>tur paketlər</value>
+  </data>
+  <data name="tour packages waiting for you" xml:space="preserve">
+    <value>tur paketi sizi gözləyir</value>
+  </data>
+  <data name="Travel" xml:space="preserve">
+    <value>Səyahət</value>
+  </data>
+  <data name="Travel and visa organizer" xml:space="preserve">
+    <value>Səyahət və viza təskilatcisi</value>
+  </data>
+  <data name="Travel insurance is always necessary. The travel company that will support you is Space Travel." xml:space="preserve">
+    <value>Səyahət sığortası həmişə lazımdır. Sizə dəstək olacaq turizm şirkəti Space Travel-dir.</value>
+  </data>
+  <data name="Travel Packages" xml:space="preserve">
+    <value>Tur Paketlər</value>
+  </data>
+  <data name="travelers" xml:space="preserve">
+    <value>səyahətçilər</value>
+  </data>
+  <data name="Updates" xml:space="preserve">
+    <value>Yeniləmələr</value>
+  </data>
+  <data name="We are ready to please you as a polite, smiling team." xml:space="preserve">
+    <value>Nəzakətli, gülərüz kollektivlə sizi sevindirməyə hazırıq.</value>
+  </data>
+  <data name="We let your sweet memory ever unforgottable" xml:space="preserve">
+    <value>Biz sizin şirin xatirənizi unudulmaz edəcəyik</value>
+  </data>
+  <data name="Whole" xml:space="preserve">
+    <value>Bütöv</value>
+  </data>
+  <data name="Why choose Space Travel" xml:space="preserve">
+    <value>Niyə Space Travel seçməlisiniz</value>
+  </data>
+  <data name="World class service" xml:space="preserve">
+    <value>Dünya səviyyəli xidmət</value>
+  </data>
+  <data name="years" xml:space="preserve">
+    <value>il</value>
+  </data>
+</root>

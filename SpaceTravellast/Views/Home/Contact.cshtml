@@ -1,0 +1,86 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+
+<!-- / Hidden Bar -->
+<!-- Banner Section -->
+<section class="inner-banner">
+	<div class="image-layer" style="background-image: url(../images/background/b-image-2.jpg);"></div>
+	<div class="auto-container">
+		<div class="content-box">
+			<h1 style="font-family: 'Roboto', sans-serif;font-weight: 500;">@localizer["Contact"]</h1>
+			<div class="bread-crumb">
+				<ul class="clearfix">
+					<li><a href="~/Home/Index">Home</a></li>
+					<li class="current">@localizer["Contact"]</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+<!--End Banner Section -->
+<!--Contact Section-->
+<section class="contact-section">
+	<div class="auto-container">
+		<div class="row clearfix">
+			<!--Info Col-->
+			<div class="info-col col-lg-4 col-md-12 col-sm-12">
+				<div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
+					<div class="info">
+						<ul>
+							<li class="location">
+								<i class="icon fa fa-map-marker-alt"></i>
+								<h5 style="font-family: 'Roboto', sans-serif;font-weight: 500;">@localizer["Location"]</h5>
+								<div class="text">24 Sulh St, Sumqayit 5006</div>
+							</li>
+							<li class="phone">
+								<i class="icon fa fa-phone"></i>
+								<h5 style ="font-family: 'Roboto', sans-serif;font-weight: 500;">@localizer["Phone Number"]</h5>
+								<div class="text"><a href="https://api.whatsapp.com/send/?phone=994705418171&text&type=phone_number&app_absent=0">+994 70 541 81 71</a></div>
+							</li>
+							<li class="email">
+								<i class="icon fa fa-envelope"></i>
+								<h5 style="font-family: 'Roboto', sans-serif;font-weight: 500;">@localizer["Email"]</h5>
+								<div class="text"><a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCKCBBXlpVCrpGwgctCKlTSsRtKQNwRWhfsgJfzQbXPzQjMRRnxdxJNgTXgqSkTgRZMncTgV">spacetravel033@gmail.com</a></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--Form Col-->
+			<div class="form-col col-lg-8 col-md-12 col-sm-12">
+				<div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
+					<h3 style="font-family: 'Roboto', sans-serif;font-weight: 500;">@localizer["Send Us A Message"]</h3>
+					<div class="form-box site-form">
+						<form method="post" action="~/Home/Contact">
+							<div class="row clearfix">
+								<div class="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
+									<div class="field-inner">
+										<input type="text" name="ContactName" placeholder="@localizer["Your name"]" required>
+									</div>
+								</div>
+								<div class="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
+									<div class="field-inner">
+										<input type="email" name="ContactEmail" placeholder="@localizer["Your email"]" required>
+									</div>
+								</div>
+								<div class="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12">
+									<div class="field-inner">
+										<textarea name="ContactDescription" placeholder="@localizer["Start writing your message here"]" required></textarea>
+									</div>
+								</div>
+								<div class="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12">
+									<button type="submit" class="theme-btn btn-style-one"><span style="font-family: 'Roboto', sans-serif;">@localizer["Submit Query"]</span></button>
+								</div>
+							</div>
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="map-box">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3029.979044191279!2d49.66533317601939!3d40.58621797141283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDDCsDM1JzEwLjQiTiA0OcKwNDAnMDQuNSJF!5e0!3m2!1str!2saz!4v1705957040776!5m2!1str!2saz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>			<div class="map-icon"><img src="~/images/resource/map-marker.png" alt=""></div>
+		</div>
+
+	</div>
+</section>

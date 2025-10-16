@@ -1,0 +1,327 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@model Turlar
+<!-- Banner Section -->
+<section class="tour-single-banner">
+    <div class="image-layer" style="background-image:url(../../images/background/b-image-7.jpg)"></div>
+    <div class="auto-container">
+        <div class="content-box">
+            <div class="content clearfix">
+                <div class="t-type">
+                    <div class="icon text-center"><img src="~/images/resource/t-icon-1.png" alt=""> <span class="icon flaticon-adventure"></span></div>
+                    @localizer["Tour Type"] <br><strong>@localizer["Adventure"]</strong>
+                </div>
+                <div class="links">
+                    <ul class="clearfix">
+                        <li><a href="#">@localizer["Gallery"]<i class="far fa-images"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Banner Section -->
+<!--Default Single Container-->
+<div class="dsp-container tour-single">
+    <div class="auto-container">
+        <div class="row clearfix">
+
+            <!--Content Side-->
+            <div class="content-side col-xl-8 col-lg-12 col-md-12 col-sm-12">
+                <div class="content-inner">
+
+                    <div class="sp-header">
+                        <div class="loc-rat clearfix">
+                            <div class="location" style="font-family: 'Roboto', sans-serif;">@Model.TurAd</div>
+                            <div class="rating"><a href="#" class="theme-btn"><i class="fa fa-star"></i> <strong>4.8</strong>   <span class="count">3210 Reviews</span></a></div>
+                            <div class="add-fav"><a href="#"><i class="far fa-heart"></i> Add to Wishlist</a></div>
+                        </div>
+                        <h1></h1>
+                        <div class="info clearfix">
+                            <div class="duration"><i class="fa fa-clock"></i> @Model.TurTarix</div>
+                        </div>
+                    </div>
+
+                    <div class="upper-content">
+                        <div class="text-content">
+                            <h3 style="font-family: 'Roboto', sans-serif;">@localizer["Tour Details"]</h3>
+                            <p style="font-family: 'Roboto', sans-serif;">@Model.TurDescription</p>
+
+
+                        </div>
+                        <@*div class="basic-info">
+                               <div class="i-block clearfix">
+                               <h5>Basic Information</h5>
+                               </div>
+                               <div class="i-block clearfix">
+                               <div class="i-title">Destination</div>
+                               <div class="i-content">England</div>
+                               </div>
+                               <div class="i-block clearfix">
+                               <div class="i-title">Departure</div>
+                               <div class="i-content">Dhaka International Airport, Dhaka</div>
+                               </div>
+                               <div class="i-block clearfix">
+                               <div class="i-title">Language</div>
+                               <div class="i-content">English, Bangla</div>
+                               </div>
+                               <div class="i-block clearfix">
+                               <div class="i-title">Included</div>
+                               <div class="i-content">
+                               <ul class="styled-list-two">
+                               <li>Oecaecat cupidatat non proident sunt</li>
+                               <li>Sed ut perspiciatis unde omnis iste </li>
+                               <li>Doloremque laudantium, totam rem aperiam</li>
+                               <li>Wuasi architecto beatae vitae dicta</li>
+                               </ul>
+                               </div>
+                               </div>
+                               <div class="i-block clearfix">
+                               <div class="i-title">Not Included</div>
+                               <div class="i-content">
+                               <ul class="styled-list-three">
+                               <li>Oecaecat cupidatat non proident sunt</li>
+                               <li>Sed ut perspiciatis unde omnis iste </li>
+                               <li>Doloremque laudantium, totam rem aperiam</li>
+                               </ul>
+                               </div>
+                               </div>
+                               </div>*@
+                    </div>
+
+
+
+
+                    <div class="t-faqs">
+                        <h3>@localizer["Frequently Asked Questions"]</h3>
+                        <ul class="accordion-box faqs-accordion clearfix">
+                            <!--Block-->
+                            <li class="accordion block active-block">
+                                <div class="acc-btn active">@localizer["How many hours before the flight should I be at the airport ?"] <span class="arrow fa fa-plus"></span></div>
+                                <div class="acc-content current">
+                                    <div class="content">
+                                        <div class="text">
+                                            <p>@localizer["You must be at the airport 3 hours before departure"]</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!--Block-->
+                            <li class="accordion block">
+                                <div class="acc-btn">@localizer["How to return purchased tickets ?"] <span class="arrow fa fa-plus"></span></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">
+                                            <p>@localizer["A ticket without baggage cannot be returned or exchanged. Returning a ticket with baggage depends on the airline. It depends on which airline it is. Each airline has its own conditions"]</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!--Block-->
+                            <li class="accordion block">
+                                <div class="acc-btn">@localizer["What are the visa procedures ?"]<span class="arrow fa fa-plus"></span></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">
+                                            <p>@localizer["a general consultation takes place, a form is filled out, documents are prepared correctly, a hotel and ticket are booked, an appointment is made at the embassy."]</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!--Block-->
+                            <li class="accordion block">
+                                <div class="acc-btn">@localizer["How to deliver the purchased ticket ?"] <span class="arrow fa fa-plus"></span></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text">
+                                            <p>@localizer["You can pick up the tickets by coming to our office, or we can send a pdf to Whatsapp"]</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="t-gallery">
+                        <h3>@localizer["Gallery"]</h3>
+                        <div class="images">
+                            <ul class="clearfix">
+                                @foreach (Turlar item in ViewBag.TurlarFirstPhoto)
+                                {
+                                    <li><div class="image"><a href="" class="lightbox-image" data-fancybox="SbGallery"><img src="~/images/Small/@item.TurlarFirstphoto" alt=""></a></div></li>
+                                }
+                                @foreach (Photo item in ViewBag.TurlarPhoto)
+                                {
+                                    <li><div class="image"><a href="" class="lightbox-image" data-fancybox="SbGallery"><img src="~/images/Small/@item.PhotoName" alt=""></a></div></li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="t-reviews">
+                        <h3>@localizer["Reviews"]</h3>
+
+                        <div class="reviews">
+                            @foreach (Comment item in ViewBag.Comments)
+                            {
+                                <div class="rev-box">
+                                    <div class="inner">
+                                        <div class="rev-header clearfix">
+                                            <h4>@item.CommentTittle</h4>
+                                            <div class="rating">
+                                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="text">@item.CommentDescription </div>
+                                        <div class="lower clearfix">
+                                            <div class="author-info">
+                                                <div class="image"><img src="~/images/resource/ra-1.jpg" alt=""></div>
+                                                <div class="author-name">@item.CommentUsername</div>
+                                            </div>
+                                            <div class="ld-link">
+                                                <span class="txt">Was this review helpful?</span>
+                                                <a href="#" class="l-btn active"><i class="fa fa-thumbs-up"></i><span class="l-count">12</span></a> <a href="#" class="d-btn"><i class="fa fa-thumbs-up"></i><span class="d-count">8</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+
+
+
+                        </div>
+
+                        <h3>@localizer["Add a review"]</h3>
+                        <div class="add-review">
+                            <div class="form-box site-form">
+                                <form method="post" action="@Model.TurlarId">
+                                    <div class="row clearfix">
+
+                                        <div class="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                            <div class="field-inner">
+                                                <input type="text" name="CommentUsername" value="" placeholder="@localizer["Enter your name"]" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                            <div class="field-inner">
+                                                <input type="email" name="CommentEmail" value="" placeholder="@localizer["Enter your email"]" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                            <div class="field-inner">
+                                                <input type="text" name="CommentTittle" value="" placeholder="@localizer["Review title"]" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                            <div class="field-inner">
+                                                <textarea name="CommentDescription" placeholder="@localizer["Start writing your review here"]" required></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                            <button type="submit" class="theme-btn btn-style-one"><span>@localizer["Submit Review"]</span></button>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Sidebar Side-->
+            <div class="sidebar-side col-xl-4 col-lg-8 col-md-12 col-sm-12">
+                <div class="sidebar-inner">
+                    <!--Widget-->
+                    <div class="dsp-widget t-book-widget alt-margin">
+                        <div class="inner-box">
+                            <div class="t-book-header">
+                                <span class="st-txt">@localizer["Start"] <br>@localizer["From"]</span>
+                                <span class="amount">₼ @Model.TurPrice</span>
+                                <span class="qty">/ @localizer["Per Person"]</span>
+                            </div>
+                            <div class="lower-box">
+                                <div class="form-box site-form">
+                                    <form method="post" action="https://jufailitech.com/envatoitems/travilo/html/tour-single.html">
+                                        <div class="fields">
+                                            <div class="form-group">
+                                                <div class="field-label">@localizer["Date"]</div>
+                                                <div class="field-inner">
+                                                    <input class="datepicker" type="text" name="field-name" value="" placeholder="@localizer["Select a date"]" required>
+                                                    <i class="alt-icon fa fa-calendar-alt"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="total clearfix">
+                                            <div class="t-ttl">@localizer["Total"]</div>
+                                            <div class="ttl-amt">$@Model.TurPrice</div>
+                                        </div>
+                                        <div class="proceed-link"><a href="https://api.whatsapp.com/send/?phone=994705418171&text&type=phone_number&app_absent=0"><button type="button" class="theme-btn btn-style-two"><span>@localizer["Proceed to Book"]</span></button></a></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Widget-->
+                    <div class="dsp-widget get-help-widget">
+                        <div class="inner">
+                            <h6>@localizer["Get Help"]</h6>
+                            <h3>@localizer["Need Help To Book?"]</h3>
+                            <div class="text">@localizer["You can contact Space Travel customer services by calling +994705418171. Our office is open on weekdays from 10:00 AM to 6:00 PM. Outside of business hours, your inquiries will be answered within 24 hours.Office Address: Sumqayit city, Sulh Plaza, Room 307."]</div>
+                            <div class="call-to">
+                                <a href="https://api.whatsapp.com/send/?phone=994705418171&text&type=phone_number&app_absent=0"><i class="icon fa fa-phone"></i> @localizer["Call Us"] <span class="nmbr">+994 541 81 71</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--Similar Section-->
+<section class="similar-section">
+    <div class="auto-container">
+        <div class="title-box">
+            <h2><span>@localizer["Similar Tours Like This"]</span></h2>
+        </div>
+        <div class="carousel-box">
+            <div class="packages-carousel">
+                @foreach (var item in ViewBag.SimilarTours)
+                {
+                    <div class="package-block">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="~/Home/TourDetails/@item.TurlarId"><img src="~/images/Small/@item.TurlarFirstphoto" alt=""></a></div>
+                                <div class="b-title top-rated"><span>@localizer["Similar tours"]</span></div>
+                            </div>
+                            <div class="lower-box">
+                                <div class="p-icon"><img src="~/images/resource/t-icon-1.png" alt=""><span class="icon flaticon-adventure"></span></div>
+                                <div class="location">@item.TurlarCategory.CategoryName</div>
+                                <h5><a href="~/Home/TourDetails/@item.TurlarId">@item.TurDescription.Substring(0,60)</a></h5>
+                                <div class="info clearfix">
+                                    <div class="duration"><i class="fa fa-clock"></i> @item.TurTarix</div>
+                                    <div class="persons"><i class="fa fa-user"></i> 12</div>
+                                </div>
+                                <div class="bottom-box clearfix">
+                                    <div class="rating"><a href="#" class="theme-btn"><i class="fa fa-star"></i> <strong>4.8</strong> &ensp; <span class="count">3210 Reviews</span></a></div>
+                                    <div class="price">@localizer["Start From"] &ensp;<span class="amount">$ @item.TurPrice</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>

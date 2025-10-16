@@ -1,0 +1,67 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@model Hotel
+
+<div style="margin-top:100px;">
+    <div>
+        <form action="~/User/AddHotels" method="post" enctype="multipart/form-data">
+            <div class="w-25 mx-auto mt-3">
+                <h2>AddHotels</h2>
+                <div>
+                    <input type="text" autofocus="" asp-for="HotelName" placeholder="@localizer["Enter the name of the hotel"]" class="form-control mb-1">
+                    <span asp-validation-for="HotelName" class="text-Tours"></span>
+                </div>
+                <select name="HotelCityId" class="form-control mb-1">
+                    <option>
+                        @localizer["Select a city"]
+                    </option>
+                    @foreach (City item in ViewBag.City)
+                    {
+                        <option value="@item.CityId">@item.CityName </option>
+                    }
+                </select>
+                <div>
+                    <select asp-for="HotelStars" class="form-control mb-1">
+                        <option>@localizer["Select the star"]</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="text" autofocus="" asp-for="HotelPrice" placeholder="@localizer["Enter the starting price"]" class="form-control mb-1">
+                    <span asp-validation-for="HotelPrice" class="text-Tours"></span>
+                </div>
+                <div>
+                    <select name="HotelCurrencyId" class="form-control mb-1">
+                        <option>
+                            @localizer["Select a currency"]
+                        </option>
+                        @foreach (Currency item in ViewBag.Currency)
+                        {
+                            <option value="@item.CurrencyId">
+                                @item.CurrencyName
+                            </option>
+                        }
+                    </select>
+                </div>
+                <div>
+                    <input type="text" autofocus="" asp-for="HotelMapLocation" placeholder="@localizer["Enter the hotel map location"]" class="form-control mb-1">
+                    <span asp-validation-for="HotelMapLocation" class="text-Tours"></span>
+                </div>
+
+                <div>
+                    <textarea asp-for="HotelDescription" placeholder="@localizer["Add a description"]" class="form-control mb-1"></textarea>
+                    <span asp-validation-for="HotelDescription" class="text-Tours"></span>
+                </div>
+                <div>
+                    <span style="color:black">@localizer["Insert a photo"]</span>
+                    <input type="file" name="photo" placeholder="@localizer["Insert a photo"]" class="form-control mb-1">
+                </div>
+
+                <button class="btn btn-success">@localizer["Add"]</button>
+            </div>
+        </form>
+    </div>
+</div>

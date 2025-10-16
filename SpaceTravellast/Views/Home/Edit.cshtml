@@ -1,0 +1,59 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+
+@model Turlar
+<div>
+    <div>
+        <form asp-controller="Home" asp-action="Edit" asp-route-id="@Model.TurlarId" method="post" enctype="multipart/form-data">
+            <div class="w-25 mx-auto mt-5">
+                <h2>@localizer["Edit"]</h2>
+                <div>
+                    <input asp-for="TurAd" type="text" placeholder="@localizer["Enter the name of the tour"]" class="form-control mb-3">
+                    <span asp-validation-for="TurAd" class="text-danger"></span>
+                </div>
+                <div>
+                    <select asp-items="ViewBag.Category" asp-for="TurlarCategoryId">
+                        <option>
+                        </option>
+                    </select>
+                </div>
+                <div>
+                    <input type="date" asp-for="TurTarix" placeholder="@localizer["Enter a date"]" class="form-control mb-3">
+                    <span asp-validation-for="TurTarix" class="text-danger"></span>
+                </div>
+                <div>
+                    <textarea asp-for="TurDescription" placeholder="@localizer["Add a description"]" class="form-control mb-3"></textarea>
+                    <span asp-validation-for="TurDescription" class="text-danger"></span>
+
+                </div>
+                <div>
+                    <span>@localizer["Insert a tour cover photo"]</span>
+                    <input type="file" name="FirstPhoto" />
+                </div>
+                <div>
+                    <span>@localizer["Insert other images"]</span>
+                    <input type="file" name="sekil" multiple />
+                </div>
+                <div>
+                    <input asp-for="TurPrice" type="number" placeholder="@localizer["Enter the price"]" class="form-control mb-3">
+                    <span asp-validation-for="TurPrice" class="text-danger"></span>
+                </div>
+                <div>
+                    <select asp-for="TurlarCurrencyId" class="form-control mb-3">
+                        <option>
+                            @localizer["Select a currency"]
+                        </option>
+                        @foreach (Currency item in ViewBag.Currency)
+                        {
+                            <option value="@item.CurrencyId">
+                                @item.CurrencyName
+                            </option>
+                        }
+                    </select>
+                </div>
+
+                <button class="btn btn-success">@localizer["Edit"]</button>
+            </div>
+
+        </form>
+    </div>
+</div>

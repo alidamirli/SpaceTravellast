@@ -1,0 +1,208 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@model News
+
+<section class="blog-single-banner">
+    <div class="image-layer" style="background-image: url(../../images/@Model.NewsPhoto);"></div>
+    <div class="auto-container">
+        <div class="content-box">
+            <div class="content">
+                <h1>@Model.NewsName</h1>
+                <ul class="info clearfix">
+                    <li><a href="#"><i class="fa fa-user"></i>Space Travel</a></li>
+                    <li><a href="#"><i class="fa fa-clock"></i> @Model.NewsTime</a></li>
+                    <li><a href="#"><i class="fa fa-comments"></i> 22</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Banner Section -->
+<!--Sidebar Container-->
+<div class="sidebar-container blog-page">
+    <div class="auto-container">
+        <div class="row clearfix">
+
+            <!--Content Side-->
+            <div class="content-side col-xl-8 col-lg-8 col-md-12 col-sm-12">
+                <div class="content-inner">
+
+                    <div class="post-details">
+                        <div class="text-content">
+                            <p>@Model.NewsDescription</p>
+                        </div>
+                        <div class="more-links clearfix">
+                            <div class="social">
+                                <strong>Share</strong> <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>   <a href="#" target="_blank" class="tiktok"><i class="fa-brands fa-tiktok" style="color: #000000;"></i></a>
+                                <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    @*     <!--Next / Prev Post-->
+                    <div class="post-controls clearfix">
+                    <div class="control p-control">
+                    <div class="image"><a href="blog-single.html"><img src="~/images/resource/pc-1.jpg" alt=""></a></div>
+                    <div class="c-title"><a href="blog-single.html"><span class="fa fa-angle-left"></span>&ensp; Previous Post</a></div>
+                    <h6><a href="blog-single.html">Jim Morrison says when the musics over turn off the light</a></h6>
+                    </div>
+                    <div class="control n-control">
+                    <div class="image"><a href="blog-single.html"><img src="~/images/resource/pc-2.jpg" alt=""></a></div>
+                    <div class="c-title"><a href="blog-single.html">Next Post &ensp;<span class="fa fa-angle-right"></span></a></div>
+                    <h6><a href="blog-single.html">Jim Morrison says when the musics over turn off the light</a></h6>
+                    </div>
+                    </div>*@
+
+
+                    <div class="comments-area">
+
+                        <h3>@ViewBag.CommentNews.Count</h3>
+
+                        @foreach (Comment item in ViewBag.CommentNews)
+                        {
+                            <div class="comments">
+                                <div class="comment-box">
+                                    <div class="inner">
+                                        <h2>
+                                            @item.CommentTittle
+                                        </h2>
+                                        <div class="text">@item.CommentDescription</div>
+                                        <div class="lower clearfix">
+                                            <div class="author-info">
+                                                <div class="image"><img src="~/images/resource/ca-1.jpg" alt=""></div>
+                                                <div class="author-name">@item.CommentUsername</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                        <h3>Add A Comment</h3>
+                        <div class="add-comment">
+                            <div class="form-box site-form">
+                                <form method="post" action="~/Home/Comments">
+                                    <input type="hidden" value="@Model.NewsId" name="Nwsid" />
+                                    <div class="row clearfix">
+                                        <div class="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                            <div class="field-inner">
+                                                <input type="text" name="CommentUsername" value="" placeholder="Your name" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                            <div class="field-inner">
+                                                <input type="email" name="CommentEmail" value="" placeholder="Your email" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                            <div class="field-inner">
+                                                <input type="text" name="CommentTittle" value="" placeholder="Write title" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                            <div class="field-inner">
+                                                <textarea name="CommentDescription" value="" placeholder="Start writing your comment here" required></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                            <button type="submit" class="theme-btn btn-style-one"><span>Submit Comment</span></button>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Sidebar Side-->
+            <div class="sidebar-side col-xl-4 col-lg-4 col-md-12 col-sm-12">
+                <div class="sidebar-inner">
+
+                    <!--Widget-->
+                    <div class="sb-widget posts-widget">
+                        <div class="w-inner">
+                            <div class="s-title"><i class="fa fa-caret-right"></i> <h4>@localizer["Recent Posts"]</h4></div>
+                            <div class="posts">
+                                @foreach (News Item in ViewBag.RecentNews)
+                                {
+                                    <div class="post">
+                                        <div class="post-thumb"><a href="~/Home/NewsDetails/@Item.NewsId"><img src="~/images/Small/@Item.NewsPhoto" alt=""></a></div>
+                                        <div class="text"><a href="~/Home/NewsDetails/@Item.NewsId">@Item.NewsName</a></div>
+                                        <p>@Item.NewsDescription.Substring(0,15)...</p>
+                                        <div class="">@Item.NewsTime</div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Widget-->
+                    <div class="sb-widget links-widget">
+                        <div class="w-inner">
+                            <div class="s-title"><i class="fa fa-caret-right"></i> <h4>@localizer["Categories"]</h4></div>
+                            <ul>
+                                <li><a href="#">Adventure</a></li>
+                                <li><a href="#">Romance</a></li>
+                                <li><a href="#">Culture</a></li>
+                                <li><a href="#">City Tour</a></li>
+                                <li><a href="#">History</a></li>
+                                <li><a href="#">Beach Tour</a></li>
+                                <li><a href="#">Sports Tour</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--Widget-->
+                    <div class="sb-widget tags-widget">
+                        <div class="w-inner">
+                            <div class="s-title"><i class="fa fa-caret-right"></i> <h4>@localizer["Tags"]</h4></div>
+                            <ul>
+                                <li><a href="#">Travel</a></li>
+                                <li><a href="#">Adventure</a></li>
+                                <li><a href="#">Tour</a></li>
+                                <li><a href="#">Mountain</a></li>
+                                <li><a href="#">Family</a></li>
+                                <li><a href="#">Go</a></li>
+                                <li><a href="#">People</a></li>
+                                <li><a href="#">Sports</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--Widget-->
+                    <div class="sb-widget gallery-widget">
+                        <div class="w-inner">
+                            <div class="s-title"><i class="fa fa-caret-right"></i> <h4>@localizer["Gallery"]</h4></div>
+                            <ul class="clearfix">
+                                <li><div class="image"><a href="~/images/resource/image-11.jpg" class="lightbox-image" data-fancybox="SbGallery"><img src="~/images/resource/g-t-1.jpg" alt=""></a></div></li>
+                                <li><div class="image"><a href="~/images/resource/image-12.jpg" class="lightbox-image" data-fancybox="SbGallery"><img src="~/images/resource/g-t-2.jpg" alt=""></a></div></li>
+                                <li><div class="image"><a href="~/images/resource/image-13.jpg" class="lightbox-image" data-fancybox="SbGallery"><img src="~/images/resource/g-t-3.jpg" alt=""></a></div></li>
+                                <li><div class="image"><a href="~/images/resource/image-14.jpg" class="lightbox-image" data-fancybox="SbGallery"><img src="~/images/resource/g-t-4.jpg" alt=""></a></div></li>
+                                <li><div class="image"><a href="~/images/resource/image-15.jpg" class="lightbox-image" data-fancybox="SbGallery"><img src="~/images/resource/g-t-5.jpg" alt=""></a></div></li>
+                                <li><div class="image"><a href="~/images/resource/image-17.jpg" class="lightbox-image" data-fancybox="SbGallery"><img src="~/images/resource/g-t-6.jpg" alt=""></a></div></li>
+                                <li><div class="image"><a href="~/images/resource/image-17.jpg" class="lightbox-image" data-fancybox="SbGallery"><img src="~/images/resource/g-t-7.jpg" alt=""></a></div></li>
+                                <li><div class="image"><a href="~/images/resource/image-18.jpg" class="lightbox-image" data-fancybox="SbGallery"><img src="~/images/resource/g-t-8.jpg" alt=""></a></div></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--Widget-->
+                    <div class="sb-widget social-widget">
+                        <div class="w-inner">
+                            <div class="s-title"><i class="fa fa-caret-right"></i> <h4>Follow Us</h4></div>
+                            <ul class="social-links clearfix">
+                                <li><a href="https://www.facebook.com/ilkin.pasayev.965?mibextid=ZbWKwL" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://bit.ly/3RtE8OF" target="_blank" class="tiktok"><i class="fa-brands fa-tiktok" style="color: #000000;"></i></a></li>
+                                <li><a href="https://www.instagram.com/space___travel/" target="_blank" class="instagram"><i class="fa-brands fa-instagram" style="color:white"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+x

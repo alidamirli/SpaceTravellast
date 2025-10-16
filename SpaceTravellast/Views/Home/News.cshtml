@@ -1,0 +1,176 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+
+@model List<News>
+<!-- Banner Section -->
+<section class="inner-banner">
+    <div class="image-layer" style="background-image: url(../images/background/b-image-5.jpg);"></div>
+    <div class="auto-container">
+        <div class="content-box">
+            <h1 style="font-family: 'Roboto', sans-serif;font-weight: 500;">@localizer["Latest News"]</h1>
+            <div class="bread-crumb">
+                <ul class="clearfix">
+                    <li><a href="~/Home/Index">Home</a></li>
+                    <li class="current" style="font-family: 'Roboto', sans-serif;font-weight: 400;">@localizer["Latest News"]</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Banner Section -->
+<!--Sidebar Container-->
+<div class="sidebar-container blog-page">
+    <div class="auto-container">
+        <div class="row clearfix">
+
+            <!--Content Side-->
+            <div class="content-side col-xl-8 col-lg-7 col-md-12 col-sm-12">
+                <div class="content-inner">
+
+                    <div class="news">
+
+                        @foreach (var item in Model)
+                        {
+                            <div class="news-block-three wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
+                                <div class="inner-box">
+                                    <div class="image-box"><a href="~/Home/NewsDetails/@item.NewsId"><img src="~/images/@item.NewsPhoto" alt=""></a></div>
+                                    <div class="lower-box">
+                                        <ul class="info clearfix">
+                                            <li><a href="#"><i class="fa fa-user"></i>  Space Travel</a></li>
+                                            <li><a href="#"><i class="fa fa-clock"></i> @item.NewsTime</a></li>
+                                        </ul>
+                                        <h3><a href="~/Home/NewsDetails/@item.NewsId">@item.NewsName</a></h3>
+                                        <div class="text">@item.NewsDescription.Substring(0,200)...</div>
+                                        @if (User.Identity.IsAuthenticated)
+                                        {
+                                            if (User.Claims.SingleOrDefault(x => x.Type == System.Security.Claims.ClaimTypes.Role).Value == "Admin")
+                                            {
+
+                                                <a href="~/Home/DeleteNews/@item.NewsId" class="btn btn-danger">delete</a>
+                                                <a href="~/Home/EditNews/@item.NewsId" class="btn btn-success">edit</a>
+                                            }
+                                        }
+                                        <div class="more-links clearfix">
+                                            <div class="more"><a href="~/Home/NewsDetails/@item.NewsId" class="theme-btn btn-style-two"><span style="font-family: 'Roboto', sans-serif;">@localizer["Read More"]</span></a></div>
+                                            <div class="social"><strong>@localizer["Share"]</strong> <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a> <a href="#" class="twitter"><i class="fab fa-twitter"></i></a> <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+
+                    </div>
+                    @if (Model == null)
+                    {
+                        <h1> xeber yoxdur</h1>
+                    }
+                    @if (Model != null)
+                    {
+                        <div class="styled-pagination centered">
+                            <ul class="clearfix">
+                                @{
+                                    int hpg = !string.IsNullOrEmpty(Context.Request.Query["Page"]) ? int.Parse(Context.Request.Query["page"]) : 0;
+                                    <li class="page-item@((hpg == 0 ? " disabled " : ""))"><a href="?page=@(hpg-1)"><i class="fa fa-angle-left"></i></a></li>
+
+                                }
+                                @for (int i = 0; i < ViewBag.NewsPageCount; i++)
+                                {
+                                    <li class="page-item @(hpg == i ? "active" : "")"><a href="?page=@i">@(i + 1)</a></li>
+                                }
+
+                                <li class="page-item @((hpg == (ViewBag.NewsPageCount-1) ? " disabled " : ""))"><a href="?page=@(hpg+1)"><i class="fa fa-angle-right"></i></a></li>
+                            </ul>
+                        </div>
+                    }
+
+                </div>
+            </div>
+
+            <!--Sidebar Side-->
+            <div class="sidebar-side col-xl-4 col-lg-5 col-md-12 col-sm-12">
+                <div class="sidebar-inner">
+
+
+                    <!--Widget-->
+                    <div class="sb-widget posts-widget">
+                        <div class="w-inner">
+                            <div class="s-title"><i class="fa fa-caret-right"></i> <h4 style="font-family: 'Roboto', sans-serif;font-weight: 400;">@localizer["Recent Posts"]</h4></div>
+                            <div class="posts">
+                                @foreach (News Item in ViewBag.RecentNews)
+                                {
+                                    <div class="post">
+                                        <div class="post-thumb"><a href="~/Home/NewsDetails/@Item.NewsId"><img src="~/images/Small/@Item.NewsPhoto" alt=""></a></div>
+                                        <div class="text"><a href="~/Home/NewsDetails/@Item.NewsId">@Item.NewsName</a></div>
+                                        <p>@Item.NewsDescription.Substring(0,15)...</p>
+                                        <div class="">@Item.NewsTime</div>
+                                    </div>
+                                }
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Widget-->
+                    <div class="sb-widget ">
+                        <div class="w-inner">
+                            <div class="s-title">
+                                <i class="fa fa-caret-right"></i>
+                                <h4 style="font-family: 'Roboto', sans-serif;font-weight: 400;">@localizer["Categories"]</h4>
+                            </div>
+                            <ul>
+                                <li><a>Adventure</a></li>
+                                <li><a>Hiking</a></li>
+                                <li><a>Romance</a></li>
+                                <li><a>Culture</a></li>
+                                <li><a>City Tour</a></li>
+                                <li><a>History</a></li>
+                                <li><a>Beach Tour</a></li>
+                                <li><a>Sports Tour</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--Widget-->
+                    <div class="sb-widget tags-widget">
+                        <div class="w-inner">
+                            <div class="s-title"><i class="fa fa-caret-right"></i> <h4 style="font-family: 'Roboto', sans-serif;font-weight: 400;">@localizer["Tags"]</h4></div>
+                            <ul>
+                                <li><a>Travel</a></li>
+                                <li><a>Adventure</a></li>
+                                <li><a>Tour</a></li>
+                                <li><a>Mountain</a></li>
+                                <li><a>Family</a></li>
+                                <li><a>Go</a></li>
+                                <li><a>People</a></li>
+                                <li><a>Sports</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                    <!--Widget-->
+                    <div class="sb-widget social-widget">
+                        <div class="w-inner">
+                            <div class="s-title"><i class="fa fa-caret-right"></i> <h4 style="font-family: 'Roboto', sans-serif;font-weight: 400;">@localizer["Follow Us"]</h4></div>
+                            <ul class="social-links clearfix">
+                                <li><a href="https://www.facebook.com/ilkin.pasayev.965?mibextid=ZbWKwL" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://bit.ly/3RtE8OF" target="_blank" class="tiktok"><i class="fa-brands fa-tiktok" style="color: #000000;"></i></a></li>
+                                <li><a href="https://www.instagram.com/space___travel/" target="_blank" class="instagram"><i class="fa-brands fa-instagram" style="color:white"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<style>
+    .disabled {
+        pointer-events: none;
+        opacity: 0.6;
+    }
+</style>

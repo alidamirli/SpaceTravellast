@@ -1,0 +1,186 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+
+
+@model List<Hotel>
+<!-- Banner Section -->
+<section class="inner-banner">
+    <div class="image-layer" style="background-image: url(../images/background/b-image-1.jpg);"></div>
+    <div class="auto-container">
+        <div class="content-box">
+            <h1>@localizer["Hotels"]</h1>
+            <div class="bread-crumb">
+                <ul class="clearfix">
+                    <li><a href="~/Home/Index">Home</a></li>
+                    <li class="current">@localizer["Hotels"]</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Banner Section -->
+<!--Hotels Section-->
+
+<section class="hotels-section">
+    <!--Serach One-->
+    <div class="search-one">
+        <div class="auto-container">
+            <div class="outer">
+                <div class="search-title"><span>@localizer["Search for your desired hotel"]</span></div>
+                <div class="form-box site-form">
+                    <form id="search" method="post">
+                        <div class="row clearfix">
+                            <div class="form-group col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                                <div class="field-label">@localizer["Location"]</div>
+                                <div class="field-inner">
+                                    <select name="countryid">
+                                        <option>
+                                            @localizer["Where want to travel?"]
+                                        </option>
+                                        @foreach (City item in ViewBag.City)
+                                        {
+
+                                            <option value="@item.CityId">
+                                                @item.CityName
+                                            </option>
+                                        }
+                                    </select>
+                                    <i class="alt-icon fa fa-map-marker-alt"></i>
+                                </div>
+                            </div>
+                            <div class="form-group col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                                <div class="field-label">@localizer["Minumum price"]</div>
+                                <div class="field-inner">
+                                    <input type="text" value="" name="minprice" placeholder="@localizer["Enter minumum price"]">
+                                    <i class="alt-icon fa-solid fa-wallet"></i>
+                                </div>
+                            </div>
+                            <div class="form-group col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                                <div class="field-label">@localizer["Maximum Price"]</div>
+                                <div class="field-inner">
+                                    <input type="text" value="" name="maxprice" placeholder="@localizer["Enter maximum price"]">
+                                    <i class="alt-icon fa-solid fa-wallet"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                        <button type="submit" class="theme-btn f-btn"><span>@localizer["Search"] <i class="fa fa-search"></i></span></button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="auto-container">
+        <div class="packages">
+
+            <div class="filter-row">
+                <div class="clearfix">
+                    <div class="s-info">@localizer["Showing results of"]  <strong>1 - 3</strong> @localizer["Of"] <strong> @Model.Count</strong> @localizer["Hotels"]</div>
+
+                </div>
+            </div>
+            <div class="row clearfix" id="hotels">
+                @foreach (var item in Model)
+                {
+                    <!--Block-->
+                    <div class="package-block alt col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="~/Home/HotelsDetails/@item.HotelId"><img src="~/images/Small/@item.HotelPhoto" alt=""></a></div>
+                                <div class="b-title featured"><span>@localizer["Hotel"]</span></div>
+                                <div class="fav-btn"><a href="#"><span class="far fa-heart"></span></a></div>
+                            </div>
+                            <div class="lower-box">
+                                <div class="location">@item.HotelCity.CityName</div>
+                                <h5><a href="~/Home/HotelsDetails/@item.HotelId">@item.HotelName</a></h5>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    if (User.Claims.SingleOrDefault(x => x.Type == System.Security.Claims.ClaimTypes.Role).Value == "Admin")
+                                    {
+
+                                        <a href="~/Home/DeleteHotels/@item.HotelId" class="btn btn-danger">@localizer["Delete"]</a>
+                                        <a href="~/Home/EditHotels/@item.HotelId" class="btn btn-success">@localizer["Edit"]</a>
+                                    }
+                                }
+                                <div class="bottom-box clearfix">
+                                    <div class="rating"><a href="#" class="theme-btn"><i class="fa fa-star"></i> <strong>@item.HotelStars</strong> &ensp; <span class="count">3210 Reviews</span></a></div>
+                                    <div class="price">@localizer["Start from"] &ensp;<span class="amount">@item.HotelCurrency.CurrencyName @item.HotelPrice</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <div class="styled-pagination centered">
+                <ul class="clearfix">
+                    @{
+                        int hpg = !string.IsNullOrEmpty(Context.Request.Query["Page"]) ? int.Parse(Context.Request.Query["page"]) : 0;
+                        <li class="page-item@((hpg == 0 ? " disabled" : ""))"><a href="?page=@(hpg-1)"><i class="fa fa-angle-left"></i></a></li>
+
+                    }
+                    @for (int i = 0; i < ViewBag.HotelPageCount; i++)
+                    {
+                        <li class="page-item @(hpg == i ? "active" : "")"><a href="?page=@i">@(i + 1)</a></li>
+                    }
+
+                    <li class="page-item @((hpg == (ViewBag.HotelPageCount-1) ? " disabled" : ""))"><a href="?page=@(hpg+1)"><i class="fa fa-angle-right"></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .disabled {
+        pointer-events: none;
+        opacity: 0.6;
+    }
+</style>
+
+<script>
+    $('#search').submit(function (e) {
+        e.preventDefault();
+        let formdata = new FormData(this);
+        $.ajax({
+            type: 'POST',
+            url: '/Home/Search',
+            data: formdata,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: (res) => {
+                console.log(res)
+                $("#hotels").empty()
+                $(res).each(function () {
+                    $('#hotels').append(`
+                          <div class="package-block alt col-lg-4 col-md-6 col-sm-12">
+                                    <div class="inner-box">
+                                        <div class="image-box">
+                                            <div class="image"><a href="../Home/HotelsDetails/${this.hotelId}"><img src="../images/${this.hotelPhoto}" alt=""></a></div>
+                                            <div class="b-title featured"><span>Featured</span></div>
+                                            <div class="fav-btn"><a href="#"><span class="far fa-heart"></span></a></div>
+                                        </div>
+                                        <div class="lower-box">
+                                                    <div class="location">${this.cityName}</div>
+                                                    <h5><a href="../Home/HotelsDetails/${this.hotelId}">${this.hotelName} </a></h5 >
+                                            <div class="bottom-box clearfix">
+                                                <div class="rating"><a href="#" class="theme-btn"><i class="fa fa-star"></i> <strong>4.8</strong> &ensp; <span class="count">3210 Reviews</span></a></div>
+                                                    <div class="price">Start from &ensp;<span class="amount">$ ${this.hotelPrice}</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                      `);
+                })
+            },
+            error: function () {
+                console.log('Xəta baş verdi')
+            }
+        })
+
+    })
+
+</script>

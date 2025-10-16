@@ -1,0 +1,8 @@
+﻿@foreach (Turlar item in ViewBag.Tours)
+{
+    <div class="news-post">
+        <div class="image"><a href="~/Home/TourDetails/@item.TurlarId"><img src="~/images/Small/@item.TurlarFirstphoto" alt=""></a></div>
+        <h6><a href="#">@item.TurAd</a></h6>
+        <div class="price">Starts from <span class="amount">@item.TurlarCurrency.CurrencyName @item.TurPrice </span></div>
+    </div>
+}

@@ -1,0 +1,333 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>SpaceTravel</title>
+    <!-- Stylesheets -->
+    <link href="~/css/bootstrap.css" rel="stylesheet">
+    <link href="~/css/style.css" rel="stylesheet">
+    <link href="~/css/Fonts.css" rel="stylesheet">
+    <link rel="shortcut icon" href="~/images/space foto.jpg" type="image/x-icon">
+    <link rel="icon" href="i~/images/space foto.jpg" type="image/x-icon">
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta description="Make your tour more enjoyable with Space Travel">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link href="~/css/responsive.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5ec31c46d7.js" crossorigin="anonymous"></script>
+    <script src=" https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PGM626PTNT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PGM626PTNT');
+    </script>
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+
+        <!-- Preloader -->
+        <div class="loader-wrap">
+            <div class="preloader">
+                <div class="preloader-close">x</div>
+                <div id="handle-preloader" class="handle-preloader">
+                    <div class="animation-preloader">
+                        <div class="txt-loading">
+                            <span data-text-preloader="S" class="letters-loading">
+                                S
+                            </span>
+                            <span data-text-preloader="P" class="letters-loading">
+                                P
+                            </span>
+                            <span data-text-preloader="A" class="letters-loading">
+                                A
+                            </span>
+                            <span data-text-preloader="C" class="letters-loading">
+                                C
+                            </span>
+                            <span data-text-preloader="E" class="letters-loading">
+                                E
+                            </span>
+                            <span data-text-preloader="T" class="letters-loading">
+                                T
+                            </span>
+                            <span data-text-preloader="R" class="letters-loading">
+                                R
+                            </span>
+                            <span data-text-preloader="A" class="letters-loading">
+                                A
+                            </span>
+                            <span data-text-preloader="V" class="letters-loading">
+                                V
+                            </span>
+                            <span data-text-preloader="E" class="letters-loading">
+                                E
+                            </span>
+                            <span data-text-preloader="L" class="letters-loading">
+                                L
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Preloader End -->
+        <!-- Main Header-->
+        <header class="main-header">
+            <!-- Header Upper -->
+            <div class="header-upper">
+                <div class="auto-container">
+                    <!-- Main Box -->
+                    <div class="main-box clearfix">
+                        <!--Logo-->
+                        <div class="logo-box">
+                            <div class="logo"><a href="~/Home/Index" title="SpaceTravel"><img src="~/images/space foto.jpg" alt="" title="SpaceTravel"></a></div>
+                        </div>
+                        <div class="right-col col-lg-6 col-md-12">
+                            <div class="inner wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                <div class="image-layer" style="background-image: url(../images/background/banner-1.jpg);"></div>
+                            </div>
+                        </div>
+
+                        <div class="nav-box clearfix">
+                            <!--Nav Outer-->
+                            <div class="nav-outer clearfix">
+                                <nav class="main-menu">
+                                    <ul class="navigation clearfix">
+                                        <li class=" dropdown">
+                                            <a href="~/Home/Index">Home</a>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="~/Home/Tours">Tours</a>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="~/Home/Hotels">Hotels</a>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="~/Home/Services">Services</a>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="~/Home/About">About</a>
+                                        </li>
+                                        <li>
+                                            <a href="~/Home/Contact">Contact</a>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="~/Home/News">News</a>
+                                        </li>
+                                        @if (User.Identity.IsAuthenticated)
+                                        {
+                                            if (User.Claims.SingleOrDefault(x => x.Type == System.Security.Claims.ClaimTypes.Role).Value == "Admin")
+                                            {
+                                                <li><a href="~/User/AddHotels">AddHotels</a></li>
+                                                <li><a href="~/User/AddTours">AddTours</a></li>
+                                                <li><a href="~/User/AddNews">AddNews</a></li>
+                                            }
+                                        }
+                                    </ul>
+                                </nav>
+                                <!-- Main Menu End-->
+                            </div>
+                            <!--Nav Outer End-->
+
+                        </div>
+
+                        <!-- Hidden Nav Toggler -->
+                        <div class="nav-toggler">
+                            <button class="hidden-bar-opener"><span class="icon"><img src="~/images/icons/menu-icon.svg" alt=""></span></button>
+                        </div>
+
+                        <div class="menu-backdrop"></div>
+
+                        <section class="hidden-bar">
+                            <!-- Hidden Bar Wrapper -->
+                            <div class="hidden-bar-wrapper">
+                                <div class="hidden-bar-closer"><span class="icon"><svg class="icon-close" role="presentation" viewBox="0 0 16 14"><path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path></svg></span></div>
+                                <div class="nav-logo-box">
+                                    <div class="logo"><a href="~/Home/Index" title="SpaceTravel"><img src="~/images/space foto.jpg" alt="" title="SpaceTravel"></a></div>
+                                </div>
+                                <!-- .Side-menu -->
+                                <div class="side-menu">
+                                    <ul class="navigation clearfix">
+                                        <li>
+                                            <a href="~/Home/Index">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="~/Home/Tours">Tours</a>
+                                        </li>
+                                        <li>
+                                            <a href="~/Home/Hotels">Hotels</a>
+                                        </li>
+                                        <li>
+                                            <a href="~/Home/About">About</a>
+                                        </li>
+                                        <li>
+                                            <a href="~/Home/News">News</a>
+                                        </li>
+                                        <li>
+                                            <a href="~/Home/Contact">Contact</a>
+                                        </li>
+                                        @if (User.Identity.IsAuthenticated)
+                                        {
+                                            if (User.Claims.SingleOrDefault(x => x.Type == System.Security.Claims.ClaimTypes.Role).Value == "Admin")
+                                            {
+                                                <li><a href="~/User/AddHotels">AddHotels</a></li>
+                                                <li><a href="~/User/AddTours">AddTours</a></li>
+                                                <li><a href="~/User/AddNews">AddNews</a></li>
+                                            }
+                                        }
+                                    </ul>
+
+                                </div><!-- /.Side-menu -->
+
+
+                            </div>
+                            <!-- / Hidden Bar Wrapper -->
+                        </section>
+
+                        <div class="links-box clearfix">
+                            <div class="link lang-box">
+                                <ul>
+                                    <li>
+                                        @await Html.PartialAsync("Dil")
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="link social">
+                                <ul class="social-links clearfix">
+                                    <li><a href="https://www.facebook.com/ilkin.pasayev.965?mibextid=ZbWKwL" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="https://bit.ly/3RtE8OF" class="tiktok" target="_blank"><i class="fa-brands fa-tiktok" style="color: #000000;"></i></a></li>
+                                    <li><a href="https://www.instagram.com/space___travel/" target="_blank" class="instagram"><i class="fa-brands fa-instagram" style="color:#c82885"></i></a></li>
+
+                                </ul>
+                            </div>
+                            <div class="link call-to">
+                                <a href="https://api.whatsapp.com/send/?phone=994705418171&text&type=phone_number&app_absent=0" style="font-family: 'Roboto', sans-serif;font-weight: 500;" target="_blank"><i class="icon fa fa-phone"></i> @localizer["Call Us"] <span class="nmbr">+994 70 541 81 71</span></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- End Header Upper -->
+        </header>
+        <!--End Main Header -->
+        <!--Menu Backdrop-->
+        @RenderBody()
+
+        <!-- Hidden Navigation Bar -->
+        <!--Main Footer-->
+        <footer class="main-footer">
+            <div class="upper-section">
+                <div class="auto-container">
+                    <div class="content-box">
+                        <div class="row clearfix">
+                            <div class="footer-column col-xl-4 col-lg-3 col-md-6 col-sm-12">
+                                <div class="footer-widget about-widget">
+                                    <div class="footer-logo"><a href="~/Home/Index" title="SpaceTravel"><img style="width:70%" src="~/images/Asset 2.png" alt="" title="SpaceTravel"></a></div>
+                                    <div class="footer-info">
+                                        <ul class="info">
+                                            <li class="address"><a href="https://maps.app.goo.gl/rucDKyRcp7uVQh5R6" target="_blank"><i class="icon fa fa-map-marker-alt"></i>24 Sulh St, Sumqayit 5006</a></li>
+                                            <li class="phone"><a href="https://api.whatsapp.com/send/?phone=994705418171&text&type=phone_number&app_absent=0" target="_blank"><i class="icon fa fa-phone"></i> +994 70 541 81 71</a></li>
+                                            <li class="email"><a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCKCBBXlpVCrpGwgctCKlTSsRtKQNwRWhfsgJfzQbXPzQjMRRnxdxJNgTXgqSkTgRZMncTgV" target="_blank"><i class="icon fa fa-envelope"></i> spacetravel44@gmail.com</a></li>
+                                        </ul>
+                                        <ul class="social-links clearfix">
+                                            <li><a href="https://www.facebook.com/ilkin.pasayev.965?mibextid=ZbWKwL" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="https://bit.ly/3RtE8OF" target="_blank" class="tiktok"><i class="fab fa-tiktok" style="color: black;"></i></a></li>
+                                            <li><a href="https://www.instagram.com/space___travel/" target="_blank" class="instagram"><i class="fa-brands fa-instagram" style="color: white;"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12">
+                                <div class="row clearfix">
+
+                                    @await Component.InvokeAsync("Country")
+
+                                    <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                                        <div class="footer-widget links-widget">
+                                            <h4>Useful Links</h4>
+                                            <div class="links">
+                                                <ul>
+                                                    <li><a href="~/Home/About">About Us</a></li>
+                                                    <li><a href="~/Home/Contact">Contact</a></li>
+                                                    <li><a href="~/Home/News">News</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="footer-column col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                                <div class="footer-widget news-widget">
+                                    <h4>Featured Tours</h4>
+                                    <!--Logo-->
+                                    <div class="news">
+                                        @await Component.InvokeAsync("Tours")
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="f-bottom">
+                <div class="auto-container">
+                    <div class="inner clearfix">
+                        <div class="copyright">All rights reserved <strong>SpaceTravel</strong>  &copy; 2023</div>
+
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+    </div>
+    <!--End pagewrapper-->
+    <!--Scroll to top-->
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="icon"><img src="~/images/icons/arrow-up.svg" alt="" title="Go To Top"></span></div>
+    <script>
+        $(document).ready(function () {
+            var url = window.location.pathname;
+            $(".navigation li a").each(function () {
+                if ($(this).attr("href") === url) {
+                    $(this).parent().addClass("current");
+                }
+            });
+        });
+    </script>
+
+
+    <script src="~/js/jquery.js"></script>
+    <script src="~/js/swiper.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery-ui.js"></script>
+    <script src="~/js/jquery.fancybox.js"></script>
+    <script src="~/js/isotope.js"></script>
+    <script src="~/js/slick.js"></script>
+    <script src="~/js/jquery.fancybox.js"></script>
+    <script src="~/js/validate.js"></script>
+    <script src="~/js/appear.js"></script>
+    <script src="~/js/wow.js"></script>
+    <script src="~/js/touchspin.js"></script>
+    <script src="~/js/custom-script.js"></script>
+</body>
+
+</html>
+

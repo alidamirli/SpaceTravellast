@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="A solution to every issue related to tourism" xml:space="preserve">
+    <value>Turizmlə bağlı bütün məsələlərin həlli</value>
+  </data>
+  <data name="At Space Travel, we provide unbiased advice on how to get the best vacation for your taste and budget." xml:space="preserve">
+    <value>Space Travel-da zövqünüzə və büdcənizə uyğun mükəmməl tətil tapmaq üçün qərəzsiz məsləhətlər veririk.</value>
+  </data>
+  <data name="Based on our many years of experience and knowledge, we help you find the right vacation for you" xml:space="preserve">
+    <value>Çoxillik təcrübəmizə və biliklərimizə əsaslanaraq, sizə uyğun tətili tapmaqda kömək edəcəyik.</value>
+  </data>
+  <data name="Companies we cooperate with" xml:space="preserve">
+    <value>Əməkdaşlıq etdiyimiz şirkətlər</value>
+  </data>
+  <data name="Cooperations" xml:space="preserve">
+    <value>Əməkdaşlıqlar</value>
+  </data>
+  <data name="destination" xml:space="preserve">
+    <value>istiqamət</value>
+  </data>
+  <data name="From breathtaking views to impeccable service, treat yourself and your loved ones to a spectacular vacation that will leave you mesmerized." xml:space="preserve">
+    <value>Nəfəs kəsən mənzərələrdən qüsursuz xidmətə qədər özünüzü və yaxınlarınızı sizi heyran edəcək möhtəşəm bir tətilə qədər sevindirin.</value>
+  </data>
+  <data name="High Quality Management" xml:space="preserve">
+    <value>Yüksək Keyfiyyətli İdarəetmə</value>
+  </data>
+  <data name="Hurry up to make a reservation before the places run out and the prices increase." xml:space="preserve">
+    <value>Yerlər bitmədən və qiymətlər artmadan rezervasiya etməyə tələsin.</value>
+  </data>
+  <data name="Let’s Explore the World" xml:space="preserve">
+    <value>Gəlin dünyanı araşdıraq</value>
+  </data>
+  <data name="Live unforgettable moments." xml:space="preserve">
+    <value>Unudulmaz anlar yaşayın.</value>
+  </data>
+  <data name="Make your tour more enjoyable with Space Travel" xml:space="preserve">
+    <value>Səyahətivizi SpaceTravel ilə Əyləncəli edin</value>
+  </data>
+  <data name="Our Mission" xml:space="preserve">
+    <value>Bizim Görəvimiz</value>
+  </data>
+  <data name="Our mission is to help people have a pleasant and unforgettable trip." xml:space="preserve">
+    <value>Bizim missiyamız insanlara xoş və unudulmaz səyahət etməkdə kömək etməkdir.</value>
+  </data>
+  <data name="Our Speciality" xml:space="preserve">
+    <value>İxtisasımız</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>Paketlər</value>
+  </data>
+  <data name="reviews" xml:space="preserve">
+    <value>rəylər</value>
+  </data>
+  <data name="Successful" xml:space="preserve">
+    <value>uğurlu</value>
+  </data>
+  <data name="Take advantage of the opportunity to have a wonderful vacation." xml:space="preserve">
+    <value>Gözəl istirahət etmək fürsətindən yararlanın.</value>
+  </data>
+  <data name="The only thing that made you rich by spending money was travel" xml:space="preserve">
+    <value>Pul xərcləməklə sizi zənginləşdirən yeganə şey səyahət idi</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Ümumi</value>
+  </data>
+  <data name="Travel" xml:space="preserve">
+    <value>Səyahət</value>
+  </data>
+  <data name="Travel and visa organizer" xml:space="preserve">
+    <value>Səyahət və viza təskilatcisi</value>
+  </data>
+  <data name="travelers" xml:space="preserve">
+    <value>səyahətçilər</value>
+  </data>
+  <data name="Whole" xml:space="preserve">
+    <value>Bütöv</value>
+  </data>
+  <data name="years" xml:space="preserve">
+    <value>il</value>
+  </data>
+  <data name="Your Trusted Travel Partner" xml:space="preserve">
+    <value>Etibarlı Səyahət Tərəfdaşınız</value>
+  </data>
+</root>

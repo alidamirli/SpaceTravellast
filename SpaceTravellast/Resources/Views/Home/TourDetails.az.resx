@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="a general consultation takes place, a form is filled out, documents are prepared correctly, a hotel and ticket are booked, an appointment is made at the embassy." xml:space="preserve">
+    <value>ümumi konsultasiya keçirilir, anket doldurulur, sənədlər düzgün tərtib edilir, hotelvə bilet bron edilir, səfirlikdə görüş təyin olunur.</value>
+  </data>
+  <data name="A ticket without baggage cannot be returned or exchanged. Returning a ticket with baggage depends on the airline. It depends on which airline it is. Each airline has its own conditions" xml:space="preserve">
+    <value>Baqajsız bilet geri qaytarılmır və dəyişdirilə bilməz. Baqajla birlikdə biletin geri qaytarılması aviaşirkətdən asılıdır. Bu, hansı aviaşirkətin olmasından asılıdır. Hər bir aviaşirkətin öz şərtləri var</value>
+  </data>
+  <data name="Add a review" xml:space="preserve">
+    <value>Rəy əlavə edin</value>
+  </data>
+  <data name="Adventure" xml:space="preserve">
+    <value>Macəra</value>
+  </data>
+  <data name="Call Us" xml:space="preserve">
+    <value>bizə zəng edin</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Tarix</value>
+  </data>
+  <data name="Enter your email" xml:space="preserve">
+    <value>E-poçtunuzu daxil edin</value>
+  </data>
+  <data name="Enter your name" xml:space="preserve">
+    <value>Adınızı daxil edin</value>
+  </data>
+  <data name="Frequently Asked Questions" xml:space="preserve">
+    <value>Tez-tez soruşulan suallar</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>Başlayır</value>
+  </data>
+  <data name="Gallery" xml:space="preserve">
+    <value>Qalereya</value>
+  </data>
+  <data name="Get Help" xml:space="preserve">
+    <value>Kömək almaq</value>
+  </data>
+  <data name="How many hours before the flight should I be at the airport ?" xml:space="preserve">
+    <value>Uçuşdan neçə saat əvvəl hava limanında olmalıyam?</value>
+  </data>
+  <data name="How to deliver the purchased ticket ?" xml:space="preserve">
+    <value>Alınan bileti necə çatdırmaq olar ?</value>
+  </data>
+  <data name="How to return purchased tickets ?" xml:space="preserve">
+    <value>Alınan biletləri necə qaytarmaq olar ?</value>
+  </data>
+  <data name="Need Help To Book?" xml:space="preserve">
+    <value>Rezervasiya etmək üçün kömək lazımdır?</value>
+  </data>
+  <data name="Our team of dedicated experts is here to assist you in making your booking process seamless and hassle-free. Whether you have specific requirements or need guidance in choosing the perfect option, we're ready to provide the support you need. Relax and let us handle the details, ensuring a smooth and enjoyable booking experience from start to finish. Contact us today and let us help you book with confidence!" xml:space="preserve">
+    <value>Keyfiyyətli və sorunsuz rezervasiya prosesinizi təmin etmək üçün fərdiləşmiş ekspertlər tərəfindən təklif olunur. Xüsusi tələbləriniz olsun və ya mükəmməl seçim etməkdə rəhbərlik əldə etməyiniz lazım olsun, biz sizə dəstək verməyə hazırıq. Sakit olun və detallarla biz məşğul olaq, əmin olun ki, başlanğıcından sona qədər sorunsuz və maraqlı bir rezervasiya təcrübəsi yaşayacaqsınız. Bugündə bizə başvurun və güvən ilə sifariş edin!</value>
+  </data>
+  <data name="Per Person" xml:space="preserve">
+    <value>Adam başına</value>
+  </data>
+  <data name="Proceed to Book" xml:space="preserve">
+    <value>Sifarişə gedin</value>
+  </data>
+  <data name="Review title" xml:space="preserve">
+    <value>Rəy başlığı</value>
+  </data>
+  <data name="Reviews" xml:space="preserve">
+    <value>Rəylər</value>
+  </data>
+  <data name="Select a date" xml:space="preserve">
+    <value>Tarix seçin</value>
+  </data>
+  <data name="Similar tours" xml:space="preserve">
+    <value>Oxşar turlar</value>
+  </data>
+  <data name="Similar Tours Like This" xml:space="preserve">
+    <value>Buna Oxşar Turlar</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Qiymətlər</value>
+  </data>
+  <data name="Start From" xml:space="preserve">
+    <value>Qiymətlər başlayır</value>
+  </data>
+  <data name="Start writing your review here" xml:space="preserve">
+    <value>Rəyinizi burada yazmağa başlayın</value>
+  </data>
+  <data name="Submit Review" xml:space="preserve">
+    <value>Rəy göndərin</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Ümumi</value>
+  </data>
+  <data name="Tour Details" xml:space="preserve">
+    <value>Tur təfərrüatları</value>
+  </data>
+  <data name="Tour Type" xml:space="preserve">
+    <value>Tur növü</value>
+  </data>
+  <data name="What are the visa procedures ?" xml:space="preserve">
+    <value>Viza prosedurları hansılardır?</value>
+  </data>
+  <data name="You can contact Space Travel customer services by calling +994705418171. Our office is open on weekdays from 10:00 AM to 6:00 PM. Outside of business hours, your inquiries will be answered within 24 hours.Office Address: Sumqayit city, Sulh Plaza, Room 307." xml:space="preserve">
+    <value>+994705418171 nömrəsinə zəng edərək "Space Travel" müştəri xidmətləri ilə əlaqə saxlaya bilərsiniz. Ofisimiz həftə içi 10:00-dan 18:00-a kimi fəaliyyət göstərir. İş saatları xaricində sorğularınız 24 saat ərzində cavablandırılacaq.
+Ofisin ünvanı: Sumqayıt şəhəri, Sülh Plaza, otaq 307.</value>
+  </data>
+  <data name="You can pick up the tickets by coming to our office, or we can send a pdf to Whatsapp" xml:space="preserve">
+    <value>Biletləri ofisimizə yaxınlaşaraq ala bilərsiniz və ya whatsappla pdf göndərə bilərik</value>
+  </data>
+  <data name="You must be at the airport 3 hours before departure" xml:space="preserve">
+    <value>Uçuşdan 3 saat əvvəl hava limanında olmalısınız</value>
+  </data>
+</root>

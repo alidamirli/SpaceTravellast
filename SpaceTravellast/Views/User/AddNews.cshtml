@@ -1,0 +1,29 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@model News
+
+<div style="margin-top:100px;">
+    <div>
+        <form action="~/User/AddNews" method="post" enctype="multipart/form-data">
+            <div class="w-25 mx-auto mt-3">
+                <h2>AddNews</h2>
+                <div>
+                    <input type="text" autofocus="" asp-for="NewsName" placeholder="@localizer["Enter the name of the news"]" class="form-control mb-1">
+                    <span asp-validation-for="NewsName" class="text-Tours"></span>
+                </div>
+                <div>
+                    <input type="date" asp-for="NewsTime" placeholder="@localizer["Enter a date"]" class="form-control mb-1">
+                    <span asp-validation-for="NewsTime" class="text-Tours"></span>
+                </div>
+                <div>
+                    <textarea asp-for="NewsDescription" placeholder="@localizer["Add a description"]" class="form-control mb-1"></textarea>
+                    <span asp-validation-for="NewsDescription" class="text-Tours"></span>
+                </div>
+                <div>
+                    <span style="color:black">@localizer["Insert a photo"]</span>
+                    <input type="file" name="photo" placeholder="@localizer["Insert a photo"]" class="form-control mb-1">
+                </div>
+                <button class="btn btn-success">@localizer["Add"]</button>
+            </div>
+        </form>
+    </div>
+</div>

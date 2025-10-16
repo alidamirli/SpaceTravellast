@@ -1,0 +1,777 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@model List<Turlar>
+
+<!-- hidden navigation bar -->
+<!-- / hidden bar -->
+<!-- banner section -->
+<section class="banner-section">
+    <div class="banner-container">
+        <div class="banner-arrow wow slideinleft" data-wow-delay="0ms" data-wow-duration="1500ms"><img src="~/images/background/banner-arrow.png" alt="" title=""></div>
+        <div class="auto-container">
+            <div class="row clearfix">
+                <div class="left-col col-lg-6 col-md-12">
+                    <div class="inner">
+                        <div class="clearfix">
+                            <div class="content">
+                                <div class="bg-image"><img src="~/images/background/bg-gradient-1.png" alt="" title=""></div>
+                                <h3>@localizer["start travelling now"]</h3>
+                                <h1 style="font-family: 'Roboto', sans-serif;"><i class="d-icon"><img src="~/images/resource/bde-1.png" alt="" title=""></i> @localizer["Explore the top destination of planet earth"]</h1>
+                                <div class="text" style="font-family: 'Roboto', sans-serif;">@localizer["Make your tour more enjoyable with Space Travel"]</div>
+
+                                <div class="lower-text"><span>@ViewBag.turlar.Count</span> @localizer["tour packages waiting for you"]</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-col col-lg-6 col-md-12">
+                    <div class="inner wow fadeinright" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="image-layer" style="background-image: url(../images/background/banner-1.jpg);"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--end banner section -->
+<!--intro section-->
+<section class="intro-section">
+    <div class="auto-container">
+        <div class="row clearfix justify-content-center">
+            <!--block-->
+            <div class="intro-block col-lg-4 col-md-6 col-sm-12">
+                <div class="inner-box wow fadeinup" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    <div class="icon"><span><img src="~/images/resource/intro-1.png" alt=""></span></div>
+                    <h4 style="font-family: 'Roboto', sans-serif;font-weight: 400;">@localizer["Most popular destination"]</h4>
+                    <div class="text">@localizer["Those planning a comfortable and unforgettable vacation in hotels located in the heart of nature, on the coast of the blue sea, can contact Space Travel"]</div>
+                </div>
+            </div>
+            <!--block-->
+            <div class="intro-block col-lg-4 col-md-6 col-sm-12">
+                <div class="inner-box wow fadeinup" data-wow-delay="300ms" data-wow-duration="1500ms">
+                    <div class="icon"><span><img src="~/images/resource/intro-2.png" alt=""></span></div>
+                    <h4 style="font-family: 'Roboto', sans-serif;font-weight: 400;">@localizer["Budget friendly packages"]</h4>
+                    <div class="text">@localizer["Every detail is thought out for the comfort of children and adults, suitable for every budget, family holidays are organized with direct flights, comfortable hotels located in the center, transfers between cities and, most importantly, visa support."]</div>
+                </div>
+            </div>
+            <!--block-->
+            <div class="intro-block col-lg-4 col-md-6 col-sm-12">
+                <div class="inner-box wow fadeinup" data-wow-delay="600ms" data-wow-duration="1500ms">
+                    <div class="icon"><span><img src="~/images/resource/intro-3.png" alt=""></span></div>
+                    <h4 style="font-family: 'Roboto', sans-serif;font-weight: 400;">@localizer["Satisfaction guarranted"]</h4>
+                    <div class="text">
+                        @localizer["Customer satisfaction is the main priority in Space Travel. That's why our team works day and night to provide our customers with the best service."]
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--about us section-->
+<section class="about-section">
+    <div class="bg-grad-right"><img src="~/images/background/bg-gradient-2.png" alt="" title=""></div>
+    <div class="auto-container">
+        <div class="row clearfix">
+            <!--text col-->
+            <div class="text-col col-lg-6 col-md-12 col-sm-12">
+                <div class="inner wow fadeinright" data-wow-duration="1500ms" data-wow-delay="0ms">
+                    <div class="d-elem-1"><img src="~/images/resource/d-elem-1.png" alt=""></div>
+                    <div class="title-box">
+                        <div class="subtitle">@localizer["Let’s explore the world"]</div>
+                        <h2><span style="font-family: 'Roboto', sans-serif;font-weight: 500;">@localizer["Make your tour more enjoyable with Space Travel"]</span></h2>
+                        <div class="text">@localizer["From breathtaking views to impeccable service, treat yourself and your loved ones to a spectacular vacation that will leave you mesmerized."]</div>
+                    </div>
+                    <div class="features">
+                        <div class="row clearfix">
+                            <div class="f-block col-lg-6 col-md-6 col-sm-12">
+                                <div class="inner-box">
+                                    <div class="icon"><img src="~/images/resource/f-icon-1.png" alt=""></div>
+                                    <h6 style="font-family: 'Roboto', sans-serif;font-weight: 400;">@localizer["Travel and visa organizer"]</h6>
+                                </div>
+                            </div>
+                            <div class="f-block col-lg-6 col-md-6 col-sm-12">
+                                <div class="inner-box">
+                                    <div class="icon"><img src="~/images/resource/f-icon-2.png" alt=""></div>
+                                    <h6 style="font-family: 'Roboto', sans-serif;font-weight: 400;">@localizer["A solution to every issue related to tourism"]</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lower-text">
+                        <div class="text">
+                            <ul>
+                                <li>@localizer["Hurry up to make a reservation before the places run out and the prices increase."]</li>
+                                <li>@localizer["Take advantage of the opportunity to have a wonderful vacation."]</li>
+                                <li>@localizer["Live unforgettable moments."]</li>
+                            </ul>
+                        </div>
+                        <div class="link-box"><a href="~/Home/About" class="theme-btn btn-style-one"><span style="font-family: 'Roboto', sans-serif;">@localizer["Read more"]</span></a></div>
+                    </div>
+                </div>
+            </div>
+            <!--image col-->
+            <div class="image-col col-lg-6 col-md-12 col-sm-12">
+                <div class="inner wow fadeinleft" data-wow-duration="1500ms" data-wow-delay="0ms">
+                    <div class="bg-grad-left"><img src="~/images/background/bg-gradient-26.png" alt="" title=""></div>
+                    <div class="d-elem-1"><img src="~/images/resource/d-elem-16.png" alt=""></div>
+                    <div class="d-elem-2"><img src="~/images/resource/d-elem-17.png" alt=""></div>
+                    <div class="image-box clearfix">
+                        <div class="image"><img src="~/images/resource/image-55.jpg" alt="" title=""></div>
+                        <div class="image"><img src="~/images/resource/image-56.jpg" alt="" title=""></div>
+                    </div>
+                    <div class="exp"><span class="count">3</span> @localizer["Successful"]<br>@localizer["years"]</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--packages section-->
+<section class="packages-section">
+    <div class="bg-layer" style="background-image: url(../images/background/pattern-1.png);"></div>
+    <div class="auto-container">
+        <div class="title-box">
+            <div class="subtitle">@localizer["Packages"]</div>
+            <h2><span style="font-family: 'Roboto', sans-serif;font-weight: 500;">@localizer["Travel Packages"]</span></h2>
+        </div>
+        <div class="carousel-box">
+            <div class="packages-carousel">
+                @foreach (Turlar item in ViewBag.turlar)
+                {
+                    <!--block-->
+                    <div class="package-block">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="~/Home/TourDetails/@item.TurlarId"><img src="~/images/Small/@item.TurlarFirstphoto" alt=""></a></div>
+                                <div class="b-title top-rated"><span>@item.TurlarCategory.CategoryName</span></div>
+                            </div>
+                            <div class="lower-box">
+                                <div class="p-icon"><img src="~/images/resource/t-icon-1.png" alt=""><span class="icon flaticon-adventure"></span></div>
+                                <div class="location">@item.TurlarCountry.CountryName</div>
+                                <h5><a href="~/Home/TourDetails/@item.TurlarId">@item.TurDescription.Substring(0,150)</a></h5>
+                                <div class="info clearfix">
+                                    <div class="duration"><i class="fa fa-clock"></i> @item.TurTarix</div>
+                                    <div class="persons"><i class="fa fa-user"></i> 1</div>
+                                </div>
+                                <div class="bottom-box clearfix">
+                                    <div class="rating"><a href="#" class="theme-btn"><i class="fa fa-star"></i> <strong>4.8</strong> &ensp; <span class="count">3210 reviews</span></a></div>
+                                    <div class="price">@localizer["start from"] &ensp;<span class="amount">@item.TurlarCurrency.CurrencyName@item.TurPrice</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--trending destinations section-->
+<section class="destination-section">
+    <div class="bg-grad-right"><img src="~/images/background/bg-gradient-3.png" alt="" title=""></div>
+    <div class="bg-grad-left"><img src="~/images/background/bg-gradient-4.png" alt="" title=""></div>
+    <div class="auto-container">
+
+        <div class="title-box centered">
+            <div class="subtitle">@localizer["Discover site"]</div>
+            <h2><i class="bg-vector"></i><span style="font-family: 'Roboto', sans-serif;font-weight: 500;">@localizer["popular destinations"]</span></h2>
+        </div>
+
+        <div class="gallery-box">
+            <div class="masonry-container row clearfix">
+                <!--block-->
+                <div class="dest-block-one masonry-item col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                    <div class="inner-box wow fadeinup" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="image-box"><a href="~/Home/Tours"><img src="~/images/resource/gallery-1.jpg" alt=""></a></div>
+                        <div class="hvr-box">
+                            <div class="hvr-inner">
+                                <h4><a href="~/Home/Tours">new york</a></h4>
+                                @* <div class="tour-count"><span>@Model.Count @localizer["tour packages"]</span></div> *@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--block-->
+                <div class="dest-block-one masonry-item column-width col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeinup" data-wow-delay="300ms" data-wow-duration="1500ms">
+                        <div class="image-box"><a href="~/Home/Tours"><img src="~/images/resource/gallery-2.jpg" alt=""></a></div>
+                        <div class="hvr-box">
+                            <div class="hvr-inner">
+                                <h4><a href="~/Home/Tours">muscat</a></h4>
+                                @* <div class="tour-count"><span>@Model.Count @localizer["tour packages"]</span></div> *@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--block-->
+                <div class="dest-block-one masonry-item column-width col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeinup" data-wow-delay="600ms" data-wow-duration="1500ms">
+                        <div class="image-box"><a href="~/Home/Tours"><img src="~/images/resource/gallery-3.jpg" alt=""></a></div>
+                        <div class="hvr-box">
+                            <div class="hvr-inner">
+                                <h4><a href="~/Home/Tours">london</a></h4>
+                                @* <div class="tour-count"><span>@Model.Count @localizer["tour packages"]</span></div> *@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--block-->
+                <div class="dest-block-one masonry-item column-width col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeinup" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="image-box"><a href="~/Home/Tours"><img src="~/images/resource/gallery-4.jpg" alt=""></a></div>
+                        <div class="hvr-box">
+                            <div class="hvr-inner">
+                                <h4><a href="~/Home/Tours">sydney</a></h4>
+                                @* <div class="tour-count"><span>@Model.Count @localizer["tour packages"]</span></div> *@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--block-->
+                <div class="dest-block-one masonry-item col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                    <div class="inner-box wow fadeinup" data-wow-delay="300ms" data-wow-duration="1500ms">
+                        <div class="image-box"><a href="~/Home/Tours"><img src="~/images/resource/gallery-5.jpg" alt=""></a></div>
+                        <div class="hvr-box">
+                            <div class="hvr-inner">
+                                <h4><a href="~/Home/Tours">rome</a></h4>
+                                @* <div class="tour-count"><span>@Model.Count @localizer["tour packages"]</span></div> *@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--block-->
+                <div class="dest-block-one masonry-item column-width col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeinup" data-wow-delay="600ms" data-wow-duration="1500ms">
+                        <div class="image-box"><a href="~/Home/Tours"><img src="~/images/resource/gallery-6.jpg" alt=""></a></div>
+                        <div class="hvr-box">
+                            <div class="hvr-inner">
+                                <h4><a href="~/Home/Tours">paris</a></h4>
+                                @* <div class="tour-count"><span>@Model.Count @localizer["tour packages"]</span></div> *@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--tour types section-->
+<section class="tour-types">
+    <div class="bg-layer" style="background-image: url(images/background/pattern-2.png);"></div>
+    <div class="d-elem-2"><img src="~/images/resource/d-elem-3.png" alt=""></div>
+    <div class="auto-container">
+        <div class="title-box centered wow fadeinup" data-wow-delay="0ms" data-wow-duration="1500ms">
+            <div class="subtitle">@localizer["Categories"]</div>
+            <h2><span style="font-family: 'Roboto', sans-serif;font-weight: 500;">@localizer["Pick A Tour Type"]</span></h2>
+        </div>
+        <div class="carousel-box wow fadeinup" data-wow-delay="0ms" data-wow-duration="1500ms">
+            <div class="d-elem-1"><img src="~/images/resource/d-elem-2.png" alt=""></div>
+            <div class="tour-types-carousel">
+
+                <!--block-->
+                <div class="tour-type-block bg-blue">
+                    <div class="inner-box">
+                        <div class="icon-box">
+                            <div class="icon"><a href="#"><span class="icon flaticon-adventure"></span></a></div>
+                        </div>
+                        <h5><a href="#" style="font-family: 'Roboto', sans-serif;font-weight: 400;">@localizer["Adventure"]</a></h5>
+                        <a href="~/Home/Tours" class="over-link"></a>
+                    </div>
+                </div>
+
+
+
+                <!--block-->
+                <div class="tour-type-block bg-yellow">
+                    <div class="inner-box">
+                        <div class="icon-box">
+                            <div class="icon"><a href="#"><span class="icon flaticon-family"></span></a></div>
+                        </div>
+                        <h5><a href="#" style="font-family: 'Roboto', sans-serif;font-weight: 400;">@localizer["Roamance"]</a></h5>
+                        <a href="~/Home/Tours" class="over-link"></a>
+                    </div>
+                </div>
+
+                <!--block-->
+                <div class="tour-type-block bg-red">
+                    <div class="inner-box">
+                        <div class="icon-box">
+                            <div class="icon"><a href="#"><span class="icon flaticon-chinese-temple-1"></span></a></div>
+                        </div>
+                        <h5><a href="#" style="font-family: 'Roboto', sans-serif;font-weight: 400;">@localizer["Culture"]</a></h5>
+                        <a href="~/Home/Tours" class="over-link"></a>
+                    </div>
+                </div>
+
+                <!--block-->
+                <div class="tour-type-block bg-blue">
+                    <div class="inner-box">
+                        <div class="icon-box">
+                            <div class="icon"><a href="#"><span class="icon flaticon-adventure"></span></a></div>
+                        </div>
+                        <h5><a href="#" style="font-family: 'Roboto', sans-serif;font-weight: 400;">@localizer["Adventure"]</a></h5>
+                        <a href="~/Home/Tours" class="over-link"></a>
+                    </div>
+                </div>
+                <!--block-->
+                <div class="tour-type-block bg-yellow">
+                    <div class="inner-box">
+                        <div class="icon-box">
+                            <div class="icon"><a href="#"><span class="icon flaticon-family"></span></a></div>
+                        </div>
+                        <h5><a href="#" style="font-family: 'Roboto', sans-serif;font-weight: 400;">@localizer["Roamance"]</a></h5>
+                        <a href="~/Home/Tours" class="over-link"></a>
+                    </div>
+                </div>
+
+                <!--block-->
+                <div class="tour-type-block bg-red">
+                    <div class="inner-box">
+                        <div class="icon-box">
+                            <div class="icon"><a href="#"><span class="icon flaticon-chinese-temple-1"></span></a></div>
+                        </div>
+                        <h5><a href="#" style="font-family: 'Roboto', sans-serif;font-weight: 400;">@localizer["Culture"]</a></h5>
+                        <a href="~/Home/Tours" class="over-link"></a>
+                    </div>
+                </div>
+
+                <!--block-->
+                <div class="tour-type-block bg-blue">
+                    <div class="inner-box">
+                        <div class="icon-box">
+                            <div class="icon"><a href="#"><span class="icon flaticon-adventure"></span></a></div>
+                        </div>
+                        <h5><a href="#" style="font-family: 'Roboto', sans-serif;font-weight: 400;">@localizer["Adventure"]</a></h5>
+                        <a href="~/Home/Tours" class="over-link"></a>
+                    </div>
+                </div>
+
+
+
+                <!--block-->
+                <div class="tour-type-block bg-yellow">
+                    <div class="inner-box">
+                        <div class="icon-box">
+                            <div class="icon"><a href="#"><span class="icon flaticon-family"></span></a></div>
+                        </div>
+                        <h5><a href="#" style="font-family: 'Roboto', sans-serif;font-weight: 400;">@localizer["Roamance"]</a></h5>
+                        <a href="~/Home/Tours" class="over-link"></a>
+                    </div>
+                </div>
+
+                <!--block-->
+                <div class="tour-type-block bg-red">
+                    <div class="inner-box">
+                        <div class="icon-box">
+                            <div class="icon"><a href="#"><span class="icon flaticon-chinese-temple-1"></span></a></div>
+                        </div>
+                        <h5><a href="#" style="font-family: 'Roboto', sans-serif;font-weight: 400;">@localizer["Culture"]</a></h5>
+                        <a href="~/Home/Tours" class="over-link"></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--why us section-->
+<section class="why-us">
+    <div class="bg-grad-left"><img src="~/images/background/bg-gradient-6.png" alt="" title=""></div>
+    <div class="bg-grad-right"><img src="~/images/background/bg-gradient-5.png" alt="" title=""></div>
+    <div class="auto-container">
+        <div class="row clearfix">
+            <!--text col-->
+            <div class="text-col col-lg-7 col-md-12 col-sm-12">
+                <div class="inner wow fadeinright" data-wow-duration="1500ms" data-wow-delay="0ms">
+                    <div class="d-elem-1"><img src="~/images/resource/d-elem-4.png" alt=""></div>
+                    <div class="title-box">
+                        <div class="subtitle">@localizer["Why choose Space Travel"]</div>
+                        <h2><span style="font-family: 'Roboto', sans-serif;font-weight: 500;">@localizer["We let your sweet memory ever unforgottable"]</span></h2>
+                    </div>
+                    <div class="features">
+                        <div class="row clearfix">
+                            <div class="f-block-two col-lg-6 col-md-6 col-sm-12">
+                                <div class="inner-box">
+                                    <div class="icon"><img src="~/images/resource/f-icon-3.png" alt=""></div>
+                                    <h4 style="font-family: 'Roboto', sans-serif;font-weight: 400;">@localizer["Polite travel agency"]</h4>
+                                    <div class="text">@localizer["We are ready to please you as a polite, smiling team."]</div>
+                                </div>
+                            </div>
+                            <div class="f-block-two col-lg-6 col-md-6 col-sm-12">
+                                <div class="inner-box">
+                                    <div class="icon"><img src="~/images/resource/f-icon-4.png" alt=""></div>
+                                    <h4 style="font-family: 'Roboto', sans-serif;font-weight: 400;">@localizer["World class service"]</h4>
+                                    <div class="text">@localizer["As a tourism company, we promise that you will be amazed by the dazzling views"]</div>
+                                </div>
+                            </div>
+                            <div class="f-block-two col-lg-6 col-md-6 col-sm-12">
+                                <div class="inner-box">
+                                    <div class="icon"><img src="~/images/resource/f-icon-5.png" alt=""></div>
+                                    <h4 style="font-family: 'Roboto', sans-serif;font-weight: 400;">@localizer["A reliable collective"]</h4>
+                                    <div class="text">@localizer["If you want luxury, adventure and a perfect vacation, please contact Space Travel collectively"]</div>
+                                </div>
+                            </div>
+                            <div class="f-block-two col-lg-6 col-md-6 col-sm-12">
+                                <div class="inner-box">
+                                    <div class="icon"><img src="~/images/resource/f-icon-6.png" alt=""></div>
+                                    <h4 style="font-family: 'Roboto', sans-serif;font-weight: 400;">@localizer["Insured travel"]</h4>
+                                    <div class="text">@localizer["Travel insurance is always necessary. The travel company that will support you is Space Travel."]</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--image col-->
+            <div class="image-col col-lg-5 col-md-12 col-sm-12">
+                <div class="inner wow fadeinleft" data-wow-duration="1500ms" data-wow-delay="0ms">
+                    <div class="d-elem-2"><img src="~/images/resource/d-elem-5.png" alt=""></div>
+                    <div class="image-box">
+                        <img src="~/images/resource/why-image-1.png" alt="" title="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--facts section-->
+<section class="facts-section">
+    <div class="video-box wow fadeinup">
+        <div class="image-box">
+            <img src="~/images/resource/image-5.jpg" alt="" title="">
+            <a href="https://youtu.be/UV0mhY2Dxr0;autoplay=1" class="lightbox-image vid-btn"><span class="icon fa fa-play"><i class="ripple"></i></span></a>
+        </div>
+    </div>
+    <div class="auto-container">
+        <div class="fact-counter">
+            <div class="row clearfix">
+                <div class="fact-block col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner clearfix">
+                        <div class="fact-count"><div class="count-box"><span class="count-text" data-stop="120" data-speed="2000">0</span><i>+</i></div></div>
+                        <div class="fact-title">@localizer["Total"] <br>@localizer["destination"]</div>
+                    </div>
+                </div>
+                <div class="fact-block col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner clearfix">
+                        <div class="fact-count"><div class="count-box"><span class="count-text" data-stop="500" data-speed="3000">0</span><i>+</i></div></div>
+                        <div class="fact-title">@localizer["Travel"] <br>@localizer["Packages"]</div>
+                    </div>
+                </div>
+                <div class="fact-block col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner clearfix">
+                        <div class="fact-count"><div class="count-box"><span class="count-text" data-stop="12" data-speed="2000">0</span>k<i>+</i></div></div>
+                        <div class="fact-title">@localizer["Total"] <br>@localizer["travelers"]</div>
+                    </div>
+                </div>
+                <div class="fact-block col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner clearfix">
+                        <div class="fact-count"><div class="count-box"><span class="count-text" data-stop="7" data-speed="2000">0</span>k<i>+</i></div></div>
+                        <div class="fact-title">@localizer["Whole"] <br>@localizer["reviews"]</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!--clients section-->
+<section class="clients-section">
+    <div class="auto-container">
+        <div class="carousel-box">
+            <div class="clients-carousel">
+                <!--block-->
+                <div class="client-block">
+                    <div class="image"><a><img src="~/images/azallogo 2.png" alt=""></a></div>
+                </div>
+                <!--block-->
+                <div class="client-block">
+                    <div class="image"><a><img src="~/images/Buta airways.png" alt=""></a></div>
+                </div>
+                <!--block-->
+                <div class="client-block">
+                    <div class="image"><a><img src="~/images/Wizzair.png" alt=""></a></div>
+                </div>
+                <!--block-->
+                <div class="client-block">
+                    <div class="image"><a><img src="~/images/Turkish Airlines.png" alt=""></a></div>
+                </div>
+                <!--block-->
+                <div class="client-block">
+                    <div class="image"><a><img src="~/images/SummerTourlogo.png" alt=""></a></div>
+                </div>
+                <!--block-->
+                <div class="client-block">
+                    <div class="image"><a><img src="~/images/Ural airlines logo.png" alt=""></a></div>
+                </div>
+                <!--block-->
+                <div class="client-block">
+                    <div class="image"><a><img src="~/images/Qatar airways logo.png" alt=""></a></div>
+                </div>
+                <!--block-->
+                <div class="client-block">
+                    <div class="image"><a><img src="~/images/lufthansa.png" alt=""></a></div>
+                </div>
+                <!--block-->
+                <div class="client-block">
+                    <div class="image"><a><img src="~/images/airholland.png" alt=""></a></div>
+                </div>
+                <!--block-->
+                <div class="client-block">
+                    <div class="image"><a><img src="~/images/Airastana.png" alt=""></a></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!--news section-->
+<section class="news-section">
+    <div class="auto-container">
+        <div class="title-box centered">
+            <div class="subtitle">@localizer["Updates"]</div>
+            <h2><span style="font-family: 'Roboto', sans-serif;font-weight: 500;">@localizer["From Our Blog"]</span></h2>
+        </div>
+        <div class="news-box">
+            <div class="bg-grad-left"><img src="~/images/background/bg-gradient-9.png" alt="" title=""></div>
+            <div class="bg-grad-right"><img src="~/images/background/bg-gradient-10.png" alt="" title=""></div>
+            <div class="masonry-container row clearfix">
+
+                @foreach (News item in ViewBag.News)
+                {
+                    <!--block-->
+                    <div class="news-item masonry-item col-xl-6 col-lg-12 col-md-12 col-sm-12 wow fadeinup" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="news-block-one">
+                            <div class="inner-box">
+                                <div class="image-layer" style="background-image: url(../images/Small/@item.NewsPhoto);"></div>
+                                <div class="over-box">
+                                    <ul class="info clearfix">
+                                        <li><a href="#"><i class="fa fa-folder"></i> adventure</a></li>
+                                        <li><a href="#"><i class="fa fa-clock"></i> @item.NewsTime</a></li>
+                                        @* <li><a href="#"><i class="fa fa-comments"></i>@item.Comments.Count</a></li> *@
+                                    </ul>
+                                    <h3><a href="~/Home/NewsDetails/@item.NewsId">@item.NewsName</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--insta feed section-->
+<section class="insta-section">
+    <!--feed row-->
+    <div class="insta-feed">
+        <div class="carousel-container">
+            <div class="carousel-box">
+                <div class="insta-carousel">
+                    <!--block-->
+                    <div class="insta-block">
+                        <div class="image">
+                            <span class="img"><a href="images/resource/insta-1.jpg" class="lightbox-image" data-fancybox="insta-gallery"><img src="~/images/resource/insta-1.jpg" alt=""></a></span>
+                        </div>
+                    </div>
+                    <!--block-->
+                    <div class="insta-block s-h">
+                        <div class="image">
+                            <span class="img"><a href="images/resource/insta-2.jpg" class="lightbox-image" data-fancybox="insta-gallery"><img src="~/images/resource/insta-2.jpg" alt=""></a></span>
+                        </div>
+                    </div>
+                    <!--block-->
+                    <div class="insta-block m-h">
+                        <div class="image">
+                            <span class="img"><a href="images/resource/insta-3.jpg" class="lightbox-image" data-fancybox="insta-gallery"><img src="~/images/resource/insta-3.jpg" alt=""></a></span>
+                        </div>
+                    </div>
+                    <!--block-->
+                    <div class="insta-block s-h">
+                        <div class="image">
+                            <span class="img"><a href="images/resource/insta-4.jpg" class="lightbox-image" data-fancybox="insta-gallery"><img src="~/images/resource/insta-4.jpg" alt=""></a></span>
+                        </div>
+                    </div>
+                    <!--block-->
+                    <div class="insta-block">
+                        <div class="image">
+                            <span class="img"><a href="images/resource/insta-5.jpg" class="lightbox-image" data-fancybox="insta-gallery"><img src="~/images/resource/insta-5.jpg" alt=""></a></span>
+                        </div>
+                    </div>
+                    <!--block-->
+                    <div class="insta-block xs-h">
+                        <div class="image">
+                            <span class="img"><a href="images/resource/insta-6.jpg" class="lightbox-image" data-fancybox="insta-gallery"><img src="~/images/resource/insta-6.jpg" alt=""></a></span>
+                        </div>
+                    </div>
+                    <!--block-->
+                    <div class="insta-block s-h">
+                        <div class="image">
+                            <span class="img"><a href="images/resource/insta-7.jpg" class="lightbox-image" data-fancybox="insta-gallery"><img src="~/images/resource/insta-7.jpg" alt=""></a></span>
+                        </div>
+                    </div>
+                    <!--block-->
+                    <div class="insta-block">
+                        <div class="image">
+                            <span class="img"><a href="images/resource/insta-8.jpg" class="lightbox-image" data-fancybox="insta-gallery"><img src="~/images/resource/insta-8.jpg" alt=""></a></span>
+                        </div>
+                    </div>
+                    <!--block-->
+                    <div class="insta-block s-h">
+                        <div class="image">
+                            <span class="img"><a href="images/resource/insta-9.jpg" class="lightbox-image" data-fancybox="insta-gallery"><img src="~/images/resource/insta-9.jpg" alt=""></a></span>
+                        </div>
+                    </div>
+                    <!--block-->
+                    <div class="insta-block m-h">
+                        <div class="image">
+                            <span class="img"><a href="images/resource/insta-10.jpg" class="lightbox-image" data-fancybox="insta-gallery"><img src="~/images/resource/insta-10.jpg" alt=""></a></span>
+                        </div>
+                    </div>
+                    <!--block-->
+                    <div class="insta-block s-h">
+                        <div class="image">
+                            <span class="img"><a href="images/resource/insta-11.jpg" class="lightbox-image" data-fancybox="insta-gallery"><img src="~/images/resource/insta-11.jpg" alt=""></a></span>
+                        </div>
+                    </div>
+                    <!--block-->
+                    <div class="insta-block">
+                        <div class="image">
+                            <span class="img"><a href="images/resource/insta-12.jpg" class="lightbox-image" data-fancybox="insta-gallery"><img src="~/images/resource/insta-12.jpg" alt=""></a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--feed row-->
+    <div class="insta-feed alternate">
+        <div class="carousel-container">
+            <div class="carousel-box">
+                <div class="insta-carousel">
+
+                    <!--block-->
+                    <div class="insta-block s-h">
+                        <div class="image">
+                            <span class="img"><a href="images/resource/insta-7.jpg" class="lightbox-image" data-fancybox="insta-gallery"><img src="~/images/resource/insta-7.jpg" alt=""></a></span>
+                        </div>
+                    </div>
+                    <!--block-->
+                    <div class="insta-block">
+                        <div class="image">
+                            <span class="img"><a href="images/resource/insta-8.jpg" class="lightbox-image" data-fancybox="insta-gallery"><img src="~/images/resource/insta-8.jpg" alt=""></a></span>
+                        </div>
+                    </div>
+                    <!--block-->
+                    <div class="insta-block s-h">
+                        <div class="image">
+                            <span class="img"><a href="images/resource/insta-9.jpg" class="lightbox-image" data-fancybox="insta-gallery"><img src="~/images/resource/insta-9.jpg" alt=""></a></span>
+                        </div>
+                    </div>
+                    <!--block-->
+                    <div class="insta-block m-h">
+                        <div class="image">
+                            <span class="img"><a href="images/resource/insta-10.jpg" class="lightbox-image" data-fancybox="insta-gallery"><img src="~/images/resource/insta-10.jpg" alt=""></a></span>
+                        </div>
+                    </div>
+                    <!--block-->
+                    <div class="insta-block s-h">
+                        <div class="image">
+                            <span class="img"><a href="images/resource/insta-11.jpg" class="lightbox-image" data-fancybox="insta-gallery"><img src="~/images/resource/insta-11.jpg" alt=""></a></span>
+                        </div>
+                    </div>
+                    <!--block-->
+                    <div class="insta-block">
+                        <div class="image">
+                            <span class="img"><a href="images/resource/insta-12.jpg" class="lightbox-image" data-fancybox="insta-gallery"><img src="~/images/resource/insta-12.jpg" alt=""></a></span>
+                        </div>
+                    </div>
+                    <!--block-->
+                    <div class="insta-block">
+                        <div class="image">
+                            <span class="img"><a href="images/resource/insta-1.jpg" class="lightbox-image" data-fancybox="insta-gallery"><img src="~/images/resource/insta-1.jpg" alt=""></a></span>
+                        </div>
+                    </div>
+                    <!--block-->
+                    <div class="insta-block s-h">
+                        <div class="image">
+                            <span class="img"><a href="images/resource/insta-2.jpg" class="lightbox-image" data-fancybox="insta-gallery"><img src="~/images/resource/insta-2.jpg" alt=""></a></span>
+                        </div>
+                    </div>
+                    <!--block-->
+                    <div class="insta-block m-h">
+                        <div class="image">
+                            <span class="img"><a href="images/resource/insta-3.jpg" class="lightbox-image" data-fancybox="insta-gallery"><img src="~/images/resource/insta-3.jpg" alt=""></a></span>
+                        </div>
+                    </div>
+                    <!--block-->
+                    <div class="insta-block s-h">
+                        <div class="image">
+                            <span class="img"><a href="images/resource/insta-4.jpg" class="lightbox-image" data-fancybox="insta-gallery"><img src="~/images/resource/insta-4.jpg" alt=""></a></span>
+                        </div>
+                    </div>
+                    <!--block-->
+                    <div class="insta-block">
+                        <div class="image">
+                            <span class="img"><a href="images/resource/insta-5.jpg" class="lightbox-image" data-fancybox="insta-gallery"><img src="~/images/resource/insta-5.jpg" alt=""></a></span>
+                        </div>
+                    </div>
+                    <!--block-->
+                    <div class="insta-block xs-h">
+                        <div class="image">
+                            <span class="img"><a href="images/resource/insta-6.jpg" class="lightbox-image" data-fancybox="insta-gallery"><img src="~/images/resource/insta-6.jpg" alt=""></a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--subscribe section-->
+<section class="subscribe-section">
+
+    <div class="auto-container">
+        <div class="outer-box wow fadeinup" data-wow-delay="0ms" data-wow-duration="1500ms">
+            <div class="bg-grad-left"><img src="~/images/background/bg-gradient-13.png" alt="" title=""></div>
+            <div class="bg-grad-right"><img src="~/images/background/bg-gradient-14.png" alt="" title=""></div>
+            <div class="content-box">
+                <div class="bg-layer" style="background-image: url(images/background/subscribe-bg.jpg);"></div>
+                <div class="row clearfix">
+                    <div class="text-col col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                        <div class="inner">
+                            <div class="title-box">
+                                <div class="subtitle">@localizer["Let’s explore the world"]</div>
+                                <h2 style="font-family: 'Roboto', sans-serif;font-weight: 500;">@localizer["Get special offers in your inbox"]</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-col col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                        <div class="inner">
+                            <div class="form-box subscribe-form">
+                                <form method="post" action="https://jufailitech.com/envatoitems/travilo/html/~/home/contact">
+                                    <div class="form-group">
+                                        <div class="field-inner">
+                                            <input type="email" name="email" value="" placeholder="@localizer["Enter your email"]" required>
+                                        </div>
+                                        <button type="submit" class="theme-btn"><i class="icon fa fa-paper-plane"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

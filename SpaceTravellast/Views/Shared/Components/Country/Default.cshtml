@@ -1,0 +1,14 @@
+﻿
+<div class="footer-column col-lg-6 col-md-6 col-sm-12">
+    <div class="footer-widget links-widget">
+        <h4>Top Destination</h4>
+        <div class="links">
+            <ul>
+                @foreach (Country item in ViewBag.Countries)
+                {
+                    <li><a href="~/Home/Tours">@item.CountryName</a></li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

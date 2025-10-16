@@ -1,0 +1,359 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@model Hotel
+
+<!-- Banner Section -->
+<section class="hotel-single-banner">
+
+    <div class="outer-container">
+        <div class="row clearfix">
+            <div class="image-col">
+                <div class="image-block">
+                    <div class="inner">
+                        <div class="image"><img src="~/images/resource/hb-image-1.jpg" alt=""></div>
+                        <div class="image-layer" style="background-image: url(images/resource/hb-image-1.jpg);"></div>
+                        <a href="images/resource/hb-image-1.jpg" class="over-link lightbox-image" data-fancybox="HotelGallery"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="image-col sm-col">
+                <div class="image-block sm-block">
+                    <div class="inner">
+                        <div class="image"><img src="~/images/resource/hb-image-2.jpg" alt=""></div>
+                        <div class="image-layer" style="background-image: url(images/resource/hb-image-2.jpg);"></div>
+                        <a href="images/resource/hb-image-2.jpg" class="over-link lightbox-image" data-fancybox="HotelGallery"></a>
+                    </div>
+                </div>
+                <div class="image-block sm-block">
+                    <div class="inner">
+                        <div class="image"><img src="~/images/resource/hb-image-3.jpg" alt=""></div>
+                        <div class="image-layer" style="background-image: url(images/resource/hb-image-3.jpg);"></div>
+                        <a href="images/resource/hb-image-3.jpg" class="over-link lightbox-image" data-fancybox="HotelGallery"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="image-col sm-col">
+                <div class="image-block sm-block">
+                    <div class="inner">
+                        <div class="image"><img src="~/images/resource/hb-image-4.jpg" alt=""></div>
+                        <div class="image-layer" style="background-image: url(images/resource/hb-image-4.jpg);"></div>
+                        <a href="images/resource/hb-image-4.jpg" class="over-link lightbox-image" data-fancybox="HotelGallery"></a>
+                    </div>
+                </div>
+                <div class="image-block sm-block">
+                    <div class="inner">
+                        <div class="image"><img src="~/images/resource/hb-image-5.jpg" alt=""></div>
+                        <div class="image-layer" style="background-image: url(images/resource/hb-image-5.jpg);"></div>
+                        <a href="images/resource/hb-image-5.jpg" class="over-link lightbox-image" data-fancybox="HotelGallery"></a>
+                    </div>
+                    <div class="img-link"><a href="#" class="theme-btn"><span>@localizer["Photos are default"]</span></a></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--End Banner Section -->
+<!--Default Single Container-->
+<div class="dsp-container hot-single">
+    <div class="auto-container">
+        <!--Part One-->
+        <div class="part-one">
+            <div class="row clearfix">
+
+                <!--Content Side-->
+                <div class="content-side col-xl-8 col-lg-12 col-md-12 col-sm-12">
+                    <div class="content-inner">
+
+                        <div class="sp-header">
+                            <div class="loc-rat clearfix">
+                                <div class="location">@Model.HotelCity.CityName</div>
+                                <div class="rating"><a href="#" class="theme-btn"><i class="fa fa-star"></i> <strong>@Model.HotelStars</strong>   <span class="count">3210 Views</span></a></div>
+                                <div class="add-fav"><a href="#"><i class="far fa-heart"></i> Save</a></div>
+                            </div>
+                            <h1>@Model.HotelName</h1>
+
+                        </div>
+
+                        <div class="upper-content">
+                            <div class="text-content">
+                                <h3>@localizer["About this Hotel"]</h3>
+                                <p>@Model.HotelDescription</p>
+                                <br>
+                                <div class="t-gallery">
+                                    <h3>@localizer["Gallery"]</h3>
+                                    <div class="images">
+                                        <ul class="clearfix">
+                                            @foreach (Hotel item in ViewBag.HotelsPhotos)
+                                            {
+                                                <li><div class="image"><a href="" class="lightbox-image" data-fancybox="SbGallery"><img src="~/images/Small/@item.HotelPhoto" alt=""></a></div></li>
+                                            }
+                                        </ul>
+                                    </div>
+                                </div>
+                                @*<h3>Facilities</h3>
+                                <div class="facilities">
+                                <div class="row clearfix">
+                                <div class="fac-block col-lg-6 col-md-6 col-sm-12">
+                                <div class="inner">
+                                <div class="icon"><i class="flaticon-air-conditioner"></i></div>
+                                <h5>Full Air Conditioned</h5>
+                                <div class="text">Beatae vitae dicta sunt explica</div>
+                                </div>
+                                </div>
+                                <div class="fac-block col-lg-6 col-md-6 col-sm-12">
+                                <div class="inner">
+                                <div class="icon"><i class="flaticon-wifi-1"></i></div>
+                                <h5>Free Wifi Zone</h5>
+                                <div class="text">Beatae vitae dicta sunt explica</div>
+                                </div>
+                                </div>
+                                <div class="fac-block col-lg-6 col-md-6 col-sm-12">
+                                <div class="inner">
+                                <div class="icon"><i class="flaticon-park"></i></div>
+                                <h5>Out Door Area</h5>
+                                <div class="text">Beatae vitae dicta sunt explica</div>
+                                </div>
+                                </div>
+                                <div class="fac-block col-lg-6 col-md-6 col-sm-12">
+                                <div class="inner">
+                                <div class="icon"><i class="flaticon-restaurant"></i></div>
+                                <h5>Food & Drinks</h5>
+                                <div class="text">Beatae vitae dicta sunt explica</div>
+                                </div>
+                                </div>
+                                <div class="fac-block col-lg-6 col-md-6 col-sm-12">
+                                <div class="inner">
+                                <div class="icon"><i class="flaticon-swimming-pool-1"></i></div>
+                                <h5>Swimming Pool</h5>
+                                <div class="text">Beatae vitae dicta sunt explica</div>
+                                </div>
+                                </div>
+                                <div class="fac-block col-lg-6 col-md-6 col-sm-12">
+                                <div class="inner">
+                                <div class="icon"><i class="flaticon-smoking-1"></i></div>
+                                <h5>Smoking Zone</h5>
+                                <div class="text">Beatae vitae dicta sunt explica</div>
+                                </div>
+                                </div>
+                                </div>
+                                </div>*@
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--Sidebar Side-->
+                <div class="sidebar-side col-xl-4 col-lg-8 col-md-12 col-sm-12">
+                    <div class="sidebar-inner">
+                        <!--Widget-->
+                        <div class="dsp-widget t-book-widget">
+                            <div class="inner-box">
+                                <div class="t-book-header">
+                                    <span class="st-txt">@localizer["Start"] <br>@localizer["From"]</span>
+                                    <span class="amount">₼ @Model.HotelPrice</span>
+                                    <span class="qty">/ @localizer["Per Person"]</span>
+                                </div>
+                                <div class="lower-box">
+                                    <div class="form-box site-form">
+                                        <form method="post" action="https://jufailitech.com/envatoitems/travilo/html/tour-single.html">
+                                            <div class="fields">
+                                                <div class="form-group">
+                                                    <div class="field-label">@localizer["Date"]</div>
+                                                    <div class="field-inner">
+                                                        <input class="datepicker" type="text" name="field-name" value="" placeholder="@localizer["Select a date"]" required>
+                                                        <i class="alt-icon fa fa-calendar-alt"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="proceed-link"><a href="https://api.whatsapp.com/send/?phone=994705418171&text&type=phone_number&app_absent=0"><button type="button" class="theme-btn btn-style-two"><span>@localizer["Proceed to Book"]</span></button></a></div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Widget-->
+                        <div class="dsp-widget get-help-widget">
+                            <div class="inner">
+                                <h6>@localizer["Get Help"]</h6>
+                                <h3>@localizer["Need Help To Book?"]</h3>
+                                <div class="text">@localizer["You can contact Space Travel customer services by calling +994705418171. Our office is open on weekdays from 10:00 AM to 6:00 PM. Outside of business hours, your inquiries will be answered within 24 hours.Office Address: Sumqayit city, Sulh Plaza, Room 307."]</div>
+                                <div class="call-to">
+                                    <a href="https://api.whatsapp.com/send/?phone=994705418171&text&type=phone_number&app_absent=0"><i class="icon fa fa-phone"></i>@localizer["Call Us"] <span class="nmbr">+994 70 541 81 71</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <!--Part Two-->
+        <div class="part-two">
+            <div class="row clearfix">
+
+                <!--Content Side-->
+                <div class="content-side col-xl-8 col-lg-12 col-md-12 col-sm-12">
+                    <div class="content-inner">
+
+                        <div class="location">
+                            <h3>@localizer["Map"]</h3>
+                            <div class="map-box">
+
+                                <iframe src="@Model.HotelMapLocation"></iframe>
+                                <div class="map-icon"><img src="~/images/resource/map-marker-2.png" alt=""></div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="t-reviews">
+                            <h3>@localizer["Reviews"]</h3>
+
+
+                            <div class="reviews">
+                                @foreach (Comment item in ViewBag.Comment)
+                                {
+                                    <div class="rev-box">
+                                        <div class="inner">
+                                            <div class="rev-header clearfix">
+                                                <h4>@item.CommentTittle</h4>
+                                                <div class="rating">
+                                                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                                </div>
+                                            </div>
+                                            <div class="text">@item.CommentDescription </div>
+                                            <div class="lower clearfix">
+                                                <div class="author-info">
+                                                    <div class="image"><img src="~/images/resource/ra-1.jpg" alt=""></div>
+                                                    <div class="author-name">@item.CommentUsername</div>
+                                                </div>
+                                                <div class="ld-link">
+                                                    <span class="txt">Was this review helpful?</span>
+                                                    <a href="#" class="l-btn active"><i class="fa fa-thumbs-up"></i><span class="l-count">12</span></a> <a href="#" class="d-btn"><i class="fa fa-thumbs-up"></i><span class="d-count">8</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                }
+
+
+
+                                @*<div class="see-all"><a href="#" class="theme-btn">View All <i class="fa fa-external-link"></i></a></div>*@
+
+                            </div>
+
+                            <h3>@localizer["Add A Review"]</h3>
+                            <div class="add-review">
+                                <div class="form-box site-form">
+                                    <form method="post" action="~/Home/CommentsNews">
+                                        <input type="hidden" value="@Model.HotelId" name="htlid" />
+                                        <div class="row clearfix">
+                                            <div class="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                                <div class="field-inner">
+                                                    <input type="text" name="CommentUsername" value="" placeholder="@localizer["Enter your name"]" required>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                                <div class="field-inner">
+                                                    <input type="email" name="CommentEmail" value="" placeholder="@localizer["Enter your email"]" required>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                                <div class="field-inner">
+                                                    <input type="text" name="CommentTittle" value="" placeholder="@localizer["Review title"]" required>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                                <div class="field-inner">
+                                                    <textarea name="CommentDescription" placeholder="@localizer["Start writing your review here"]" required></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                                <button type="submit" class="theme-btn btn-style-one"><span>@localizer["Submit Review"]</span></button>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--Sidebar Side-->
+                <div class="sidebar-side col-xl-4 col-lg-8 col-md-12 col-sm-12">
+                    <div class="sidebar-inner">
+
+
+
+
+                        <!--Widget-->
+                        <div class="dsp-widget why-us-widget">
+                            <div class="inner">
+                                <h3>@localizer["Top Reason to Choose us"]</h3>
+                                <!--Logo-->
+                                <div class="info">
+                                    <ul>
+                                        <li><span class="icon flaticon-shield"></span><span class="txt">@localizer["Secure booking and easy payment."]</span></li>
+                                        <li><span class="icon flaticon-location-2"></span><span class="txt">@localizer["Great location and best value for price."]</span></li>
+                                        <li><span class="icon flaticon-chat-1"></span><span class="txt">@localizer["People Speack English in the hotel."]</span></li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--Similar Section-->
+<section class="similar-section">
+    <div class="auto-container">
+        <div class="title-box">
+            <h2><span>@localizer["Similar Hotel Like This"]</span></h2>
+        </div>
+        <div class="carousel-box">
+            <div class="packages-carousel">
+
+                @foreach (Hotel item in ViewBag.Similarhotels)
+                {
+                    <!--Block-->
+                    <div class="package-block alt">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="~/Home/HotelsDetails/@item.HotelId"><img src="~/images/Small/@item.HotelPhoto" alt=""></a></div>
+                                <div class="b-title top-rated"><span>Top Rated</span></div>
+                            </div>
+                            <div class="lower-box">
+                                <div class="location">@item.HotelCity.CityName</div>
+                                <h5><a href="hotel-single.html">@item.HotelName</a></h5>
+                                <div class="bottom-box clearfix">
+                                    <div class="rating"><a href="#" class="theme-btn"><i class="fa fa-star"></i> <strong>4.8</strong> &ensp; <span class="count">3210 Reviews</span></a></div>
+                                    <div class="price">Start from &ensp;<span class="amount">$ @item.HotelPrice</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>

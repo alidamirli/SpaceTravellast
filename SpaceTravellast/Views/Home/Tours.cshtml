@@ -1,0 +1,220 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+
+@model List<Turlar>
+
+
+<!-- / Hidden Bar -->
+<!-- Banner Section -->
+<section class="inner-banner">
+    <div class="image-layer" style="background-image: url(../images/background/b-image-1.jpg);"></div>
+    <div class="auto-container">
+        <div class="content-box">
+            <h1>@localizer["Tours List"]</h1>
+            <div class="bread-crumb">
+                <ul class="clearfix">
+                    <li><a href="~/Home/Index">Home</a></li>
+                    <li class="current">@localizer["Tours List"]</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Banner Section -->
+<!--Sidebar Container-->
+<div class="sidebar-container">
+    <div class="auto-container">
+        <div class="row clearfix">
+            <!--Sidebar Side-->
+            <div class="sidebar-side col-xl-4 col-lg-5 col-md-12 col-sm-12">
+                <div class="sidebar-inner">
+                    <!--Widget-->
+                    <div class="sb-widget s-widget">
+                        <div class="w-inner">
+                            <div class="s-title"><i class="fa fa-caret-right"></i> <h4 style="font-family: 'Roboto', sans-serif;font-weight: 400;">@localizer["Search Packages"]</h4></div>
+                            <div class="form-box site-form">
+                                <form method="post" action="">
+                                    <div class="form-group">
+                                        <div class="field-inner">
+                                            <select name="field-name" class="custom-select">
+                                                <option>@localizer["Choose Tour"]</option>
+                                                @foreach (var item in Model)
+                                                {
+                                                    <option style="font-family: 'Roboto', sans-serif;">@item.TurAd</option>
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="field-inner">
+                                            <select name="field-name" class="custom-select">
+                                                <option>@localizer["Select Location"]</option>
+                                                @foreach (var item in Model)
+                                                {
+                                                    <option>@item.TurlarCountry.CountryName</option>
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="field-inner">
+                                            <input class="datepicker" type="text" name="field-name" value="" placeholder="@localizer["Enter time"]">
+                                            <i class="alt-icon fa fa-calendar-alt"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <select>
+                                            <option>
+                                                @localizer["Enter what type of tour you want"]
+                                            </option>
+                                            @foreach (Category item in ViewBag.tourcategory)
+                                            {
+                                                <option value="@item.CategoryId">
+                                                    @item.CategoryName
+                                                </option>
+
+                                            }
+                                        </select>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="field-inner">
+                                            <button type="submit" class="theme-btn f-btn"><span>@localizer["Search"] <i class="fa fa-search"></i></span></button>
+                                        </div>
+                                    </div>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Widget-->
+                    <div class="sb-widget p-widget">
+                        <div class="w-inner">
+                            <div class="s-title"><i class="fa fa-caret-right"></i> <h4 style="font-family: 'Roboto', sans-serif;font-weight: 400;">@localizer["Pricing"]</h4></div>
+                            <div class="range-slider">
+                                <div class="price-range-slider"></div>
+                                <div class="clearfix">
+                                    <div class="pull-left">
+                                        <div class="input">$<input type="text" class="property-amount property-amount-1" name="field-name" readonly></div>
+                                    </div>
+                                    <div class="pull-right">
+                                        <div class="input">$<input type="text" class="property-amount property-amount-2" name="field-name" readonly></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="sb-widget cbf-widget">
+                        <div class="w-inner">
+                            <div class="s-title"><i class="fa fa-caret-right"></i> <h4 style="font-family: 'Roboto', sans-serif;font-weight: 400;">@localizer["Location"]</h4></div>
+                            <ul>
+                                @foreach (var item in Model)
+                                {
+                                    <li><div class="cb-block"><input type="checkbox" id="cb-15"><label for="cb-15"><span class="txt">@item.TurlarCountry.CountryName</span></label></div></li>
+
+                                }
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Content Side-->
+            <div class="content-side col-xl-8 col-lg-7 col-md-12 col-sm-12">
+                <div class="content-inner">
+
+                    <div class="filter-row">
+                        <div class="clearfix">
+                            <div class="s-info">@localizer["Showing results of"]  <strong>1 - 4</strong> @localizer["Of"] <strong>@Model.Count</strong> @localizer["Tours"]</div>
+                            <div class="filters clearfix+">
+                                <div class="sort-by">
+                                    <div class="drop-list-one">
+                                        <div class="inner clearfix">
+                                            <div class="dropdown-outer open">
+                                                <a class="btn-box dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#">@localizer["Sort"] <i class="fas fa-angle-down"></i></a>
+                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                                    <li><a href="#">@localizer["Latest First"]</a></li>
+                                                    <li><a href="#">@localizer["Lowest Price"]</a></li>
+                                                    <li><a href="#">@localizer["Highest Price"]</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    @foreach (var item in Model)
+                    {
+                        <!--Block-->
+                        <div class="packages">
+                            <div class="package-block-two">
+                                <div class="inner-box">
+                                    <div class="image-box">
+                                        <div><a href="~/Home/TourDetails/@item.TurlarId"><img src="~/images/Small/@item.TurlarFirstphoto" alt=""></a></div>
+                                        <div class="b-title featured"><span>@item.TurlarCategory.CategoryName</span></div>
+                                        <div class="fav-btn"><a href="#"><span class="far fa-heart"></span></a></div>
+                                        <div class="p-icon"><img src="~/images/resource/t-icon-1.png" alt=""><span class="icon flaticon-adventure"></span></div>
+                                    </div>
+                                    <div class="content-box">
+
+                                        <div class="loc-rat clearfix"><div class="location">@item.TurlarCountry.CountryName</div><div class="rating"><a href="#" class="theme-btn"><i class="fa fa-star"></i> <strong>4.8</strong> &ensp; <span class="count">3210 Views</span></a></div></div>
+                                        <h5><a href="~/Home/TourDetails/@item.TurlarId">@item.TurAd</a></h5>
+                                        <div class="text">@item.TurDescription.Substring(0,190)</div>
+                                        @if (User.Identity.IsAuthenticated)
+                                        {
+                                            if (User.Claims.SingleOrDefault(x => x.Type == System.Security.Claims.ClaimTypes.Role).Value == "Admin")
+                                            {
+
+                                                <a href="~/Home/Delete/@item.TurlarId" class="btn btn-danger">@localizer["Delete"]</a>
+                                                <a href="~/Home/Edit/@item.TurlarId" class="btn btn-success">@localizer["Edit"]</a>
+                                            }
+                                        }
+                                        <div class="bottom-box clearfix">
+                                            <div class="duration"><i class="fa fa-clock"></i> @item.TurTarix</div>
+                                            <div class="price">@localizer["Start from"] &ensp;<span class="amount">@item.TurlarCurrency.CurrencyName @item.TurPrice </span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+
+                    <div class="styled-pagination">
+                        <ul class="clearfix">
+                            @{
+                                int hpg = !string.IsNullOrEmpty(Context.Request.Query["Page"]) ? int.Parse(Context.Request.Query["page"]) : 0;
+                                <li class="page-item@((hpg == 0 ? " disabled" : ""))"><a href="?page=@(hpg-1)"><i class="fa fa-angle-left"></i></a></li>
+
+                            }
+                            @for (int i = 0; i < ViewBag.ToursPageCount; i++)
+                            {
+                                <li class="page-item @(hpg == i ? "active" : "")"><a href="?page=@i">@(i + 1)</a></li>
+                            }
+
+                            <li class="page-item @((hpg == (ViewBag.ToursPageCount-1) ? " disabled" : ""))"><a href="?page=@(hpg+1)"><i class="fa fa-angle-right"></i></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<style>
+    .disabled {
+        pointer-events: none;
+        opacity: 0.6;
+    }
+</style>
